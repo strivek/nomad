@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" />
+  <title>Websanova :: wScratchPad</title>
+
+  <!-- filestart -->
+  <link rel="Stylesheet" type="text/css" href="./css/demo.css" />
+<!--  <script type="text/javascript" src="./js/lib/jquery.1.11.0.min.js"></script>-->
+  <!-- fileend -->
+</head>
+<body>
+  <div id="content">
+    <div class="content-box">
+      <div id="demo1" class="scratchpad"></div>
+      <div id="demo1-percent">&nbsp;</div>
+      <input type="button" value="重置" onclick="$('#demo1').wScratchPad('reset');"/>
+      <input type="button" value="清空" onclick="$('#demo1').wScratchPad('clear');"/>
+      <input type="button" value="可用" onclick="$('#demo1').wScratchPad('enable', true);"/>
+      <input type="button" value="不可用" onclick="$('#demo1').wScratchPad('enable', false);"/>
+
+      <h3>Clear After 70 Percent Scratched</h3>
+      <div id="demo2" class="scratchpad"></div>
+      <div id="demo2-percent">&nbsp;</div>
+      <input type="button" value="重置" onclick="$('#demo2').wScratchPad('reset');"/>
+      <input type="button" value="清空" onclick="$('#demo2').wScratchPad('clear');"/>
+      <input type="button" value="可用" onclick="$('#demo2').wScratchPad('enable', true);"/>
+      <input type="button" value="不可用" onclick="$('#demo2').wScratchPad('enable', false);"/>
+      <style>
+        .scratchpad{
+          width:35%;
+          height: 100px;
+          border: solid 1px;
+        }
+        @media (max-width: 500px) {
+          .scratchpad {
+            width: 65%;
+          }
+        }
+      </style>
+       <script data-main="js/main" src="js/require.js"></script>
+    </div>
+  </div>
+
+</body>
+</html>

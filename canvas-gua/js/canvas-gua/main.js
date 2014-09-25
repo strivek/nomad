@@ -9,7 +9,7 @@ require(['jquery', 'canvas-gua/wScratchPad.min'], function () {
         });
     $('#demo2').wScratchPad({
         bg: './images/slide1.jpg',//设置刮完之后的背景
-        fg: './images/scratch-to-win.png',//设置刮之前的背景
+        fg: './images/slide2.jpg',//设置刮之前的背景
         'cursor': 'url("./images/bird.png") 5 5, default',//设置鼠标图案，默认为十字型
         scratchMove: function (e, percent) {
         $('#demo2-percent').html(percent);

@@ -2,82 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e2d68fa-7fbb-41ea-ba6e-3b64f1e105a0" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\css\demo.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\images\bird.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\images\coin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\images\god-sword.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\images\leaf.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\images\mario.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\images\scratch-to-win.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\images\slide1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\images\slide2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\images\slide3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\images\winner.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\js\canvas-gua\main.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\js\canvas-gua\wScratchPad.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\js\lib\jquery.1.11.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\js\main.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\canvas-gua\js\require.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\map-baidu\css\map-baidu.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\map-baidu\jquery\lib\async.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\map-baidu\jquery\lib\jquery.1.11.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\map-baidu\jquery\main.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\map-baidu\jquery\map\main.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\map-baidu\jquery\require.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\map-baidu\map-baidu.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\backTop.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\default.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test07.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test18.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\images\test19.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\js\canvas-gua\main.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\js\canvas-gua\wScratchPad.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\js\lib\jquery.1.11.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\js\main.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\js\require.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\js\waterfall\jquery.waterfall.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\js\waterfall\main.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\json\water.json" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\sass\help\_global.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\sass\help\_reset.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\sass\main.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\waterfall_lsy\sass\page\_waterfull.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\images\arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\images\packet1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\images\start1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\images\start2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\images\tan.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\images\wheel.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\images\wheel2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\js\canvas-gua\main.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\js\canvas-gua\wScratchPad.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\js\lib\jquery.1.11.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\js\main.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\js\require.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\js\wheels\main.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\sass\help\_global.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\sass\help\_reset.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\sass\main.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Work\nomad\wheel\sass\page\_wheel.scss" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="mobile.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,7 +38,7 @@
       <file leaf-file-name="bubbles.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobile/bubbles/bubbles.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.37931" vertical-offset="73" max-vertical-offset="960">
+            <state vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="960">
               <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
               <folding />
             </state>
@@ -125,18 +50,36 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="140">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mobile/bubbles/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51339287" vertical-offset="1140" max-vertical-offset="2300">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="2300">
               <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.06888634" vertical-offset="0" max-vertical-offset="871">
+              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LICENSE" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LICENSE">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="560">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -171,6 +114,7 @@
         <option value="$PROJECT_DIR$/mobile/bubbles/css/style.css" />
         <option value="$PROJECT_DIR$/mobile/bubbles/bubbles.html" />
         <option value="$PROJECT_DIR$/mobile/bubbles/js/main.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -340,6 +284,14 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -350,12 +302,14 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
       <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -363,16 +317,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
-      <option name="cucumberJsArguments" />
-      <option name="executablePath" />
-      <option name="filePath" />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -450,6 +394,38 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/mobile/bubbles/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11080">
+          <caret line="175" column="261" selection-start-line="175" selection-start-column="261" selection-end-line="175" selection-end-column="261" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/bubbles/bubbles.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="960">
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/bubbles/js/zepto.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="140">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/bubbles/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="2300">
+          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="200">
@@ -481,7 +457,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile/bubbles/bubbles.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.37931" vertical-offset="73" max-vertical-offset="960">
+        <state vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="960">
           <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
           <folding />
         </state>
@@ -491,16 +467,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="883">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mobile/bubbles/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51339287" vertical-offset="1140" max-vertical-offset="2300">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1140" max-vertical-offset="2300">
           <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06888634" vertical-offset="0" max-vertical-offset="871">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
           <folding />
         </state>
       </provider>

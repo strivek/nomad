@@ -25,7 +25,7 @@ Thumbs.db
 nbproject
 *.sublime-project
 *.sublime-workspace
-.idea
+.idea/*
 
 
 # grunt-html-validation

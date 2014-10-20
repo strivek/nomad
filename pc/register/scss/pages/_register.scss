@@ -1,0 +1,34 @@
+$font-family:'SimSun';
+.g-wrap{background: #f8f8f8;margin: 0;padding-top: 30px; height: 100%; width: 100%;
+.m-main-chy{
+  width:800px;margin:0 auto;
+ .goLogin{padding:5px 0; border-bottom: 1px solid #538700; font-size:14px; font-family: $font-family; font-weight: normal; text-align: right;
+   a{color:#00b4ff;
+     &:hover{color: #cbff20;}
+   }
+ }
+  .con{
+   &:before, &:after{display: table; content: ""}
+    &:after{clear: both;}
+    padding-top: 30px;
+    margin-top: 10px;background:#fff ;
+    .left{float: left; width: 50%;
+    .form1{
+      .form-group{ &:before, &:after{display: table; content: ""}
+        &:after{clear: both;}
+        margin-top: 14px;
+        .label{float: left;padding-top: 4px; width: 30%; text-align: right; font-size:14px;}
+        .shuru { width: 70%;float: left;
+          input{padding:4px 10px; font-size:14px; width: 80%; }}
+          .btn{padding-left:30%;float: left; width: 100%;
+            button{ width:80%;padding:6px 0;  border: none; background: #538700; color:#fff; font-size: 14px;}}
+      }
+    } }
+    .right{
+      float: right;
+      padding: 100px;
+      width:50% ;
+      color:#fff;
+     background: #11cfff;}
+  }
+ }}

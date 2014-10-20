@@ -1,0 +1,154 @@
+@charset "utf-8";
+$font-family: '宋体';
+$color: #ffe3cd;//页面字体颜色
+$hovercolor: #44332c;//鼠标经过颜色变化
+$bgcolor:#333;//页面背景颜色
+@mixin font($font-size: 16px) {
+  font-size: $font-size;
+  color: $color;
+  font-family: $font-family;
+  font-weight: normal;
+}
+
+.m-main1-cy {
+  position: relative;
+  z-index: 10;
+  padding-top: 50px;
+  padding-bottom: 200px;
+  background: $bgcolor;
+  .con{margin: 0 auto; width:30%;
+    @media (max-width: 1300px) {width:50%; }
+    @media (max-width: 768px) {width:80%; }
+  .title {
+    .myd {
+      padding-top: 72px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid $color;
+      text-align: center;
+     color:$color;
+    }
+    p {
+      visibility:hidden;
+    }
+    .war {
+      visibility: visible;
+      padding-top: 6px;
+      margin-bottom: -20px;
+      font-size: 12px;
+      color: #e60012;
+      font-family: "宋体";
+    }
+  }
+  // 登录表单
+  .login-form {
+    padding-top: 61px;
+    .form-group {
+      margin-bottom: 25px;
+      position:relative;
+      label {
+       margin-bottom: 6px;
+        display: block;
+        @include font();
+      }
+      .form-control {
+        height: 38px;//设置输入框的高度
+        width: 100%;//设置输入框的宽
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857;
+        background-image: url(about:blank);
+        background-color: transparent;
+        border: 1px solid $color;
+        //TODO-tips ie8背景透明需要有一个透明背景图片或者about:blank
+        color: $color;
+
+      }
+      p {position:absolute;
+        right:0;
+        bottom:-18px;
+        visibility: hidden;
+      }
+    }
+    .warning {//错误提示信息
+      .form-control {
+        border: 1px solid #ff0000;
+      }
+      p {
+        visibility: visible;
+        text-align: right;
+        font-family: $font-family;
+        font-size: 12px;
+        color: #e60012;
+      }
+    }
+    .fpwd a {
+      display: block;
+      padding-bottom: 7px;
+      border-bottom: 1px solid $color;
+      @include font();
+      &:hover {
+        color: #44332c;
+      }
+    }
+    .button {
+      margin-top: 13px;
+      button {
+        padding-top:10px ;
+        padding-bottom: 10px;//使用padding的值来设置button按钮的高度
+        width: 100%;
+        background: #44332c;
+        border: none;
+        color: $color;
+        font-size: 18px;
+        outline: none;
+        &:hover {
+          color: #714e38;
+        }
+      }
+    }
+  }
+  //注册新用户
+  .reg {
+    padding-top: 32px;
+    .reg-label {
+      margin-bottom: 13px;
+      @include font();
+    }
+    .button .btn {
+      padding-top:10px ;
+      padding-bottom: 10px;//使用padding来设置button的高度
+      width: 100%;
+      background: #44332c;
+      border: none;
+      color: $color;
+      font-size: 18px;
+      outline: none;
+    }
+  }
+  //第三方登录
+  .social-login {
+    padding-top: 32px;
+    h3 {
+      padding-bottom: 7px;
+      @include font();
+      border-bottom: 1px solid $color;
+    }
+    .social-list {
+      margin-top: 20px;
+      a {
+        display: inline-block;
+      }
+      a span {
+        padding-right: 30px;
+        display: inline-block;
+        font-size: 30px;
+        color: $color;
+        font-family: iconfont;
+      }
+
+      a:hover span {
+        color: $hovercolor;
+      }
+    }
+  }
+}}

@@ -1,0 +1,318 @@
+@charset "UTF-8";
+/* reset */
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th {
+  text-align: left;
+  font-weight: normal; }
+
+html, body, fieldset, img, iframe, abbr {
+  border: 0; }
+
+i, cite, em, var, address, dfn {
+  font-style: normal; }
+
+[hidefocus], summary {
+  outline: 0; }
+
+li {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6, small {
+  font-size: 100%; }
+
+sup, sub {
+  font-size: 83%; }
+
+pre, code, kbd, samp {
+  font-family: inherit; }
+
+q:before, q:after {
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+label, summary {
+  cursor: default; }
+
+a, button {
+  cursor: pointer; }
+
+h1, h2, h3, h4, h5, h6, em, strong, b {
+  font-weight: bold; }
+
+del, ins, u, s, a, a:hover {
+  text-decoration: none; }
+
+body, textarea, input, button, select, keygen, legend {
+  font: 12px/1.14 arial, \5b8b\4f53;
+  color: #333;
+  outline: 0; }
+
+body {
+  background: #fff; }
+
+a, a:hover {
+  color: #333; }
+
+.g-wrap {
+  background: #f8f8f8;
+  margin: 0;
+  padding-top: 30px;
+  height: 100%;
+  width: 100%; }
+  .g-wrap .m-main-chy {
+    width: 800px;
+    margin: 0 auto; }
+    .g-wrap .m-main-chy .goLogin {
+      padding: 5px 0;
+      border-bottom: 1px solid #538700;
+      font-size: 14px;
+      font-family: "SimSun";
+      font-weight: normal;
+      text-align: right; }
+      .g-wrap .m-main-chy .goLogin a {
+        color: #00b4ff; }
+        .g-wrap .m-main-chy .goLogin a:hover {
+          color: #cbff20; }
+    .g-wrap .m-main-chy .con {
+      padding-top: 30px;
+      margin-top: 10px;
+      background: white; }
+      .g-wrap .m-main-chy .con:before, .g-wrap .m-main-chy .con:after {
+        display: table;
+        content: ""; }
+      .g-wrap .m-main-chy .con:after {
+        clear: both; }
+      .g-wrap .m-main-chy .con .left {
+        float: left;
+        width: 50%; }
+        .g-wrap .m-main-chy .con .left .form1 .form-group {
+          margin-top: 14px; }
+          .g-wrap .m-main-chy .con .left .form1 .form-group:before, .g-wrap .m-main-chy .con .left .form1 .form-group:after {
+            display: table;
+            content: ""; }
+          .g-wrap .m-main-chy .con .left .form1 .form-group:after {
+            clear: both; }
+          .g-wrap .m-main-chy .con .left .form1 .form-group .label {
+            float: left;
+            padding-top: 4px;
+            width: 30%;
+            text-align: right;
+            font-size: 14px; }
+          .g-wrap .m-main-chy .con .left .form1 .form-group .shuru {
+            width: 70%;
+            float: left; }
+            .g-wrap .m-main-chy .con .left .form1 .form-group .shuru input {
+              padding: 4px 10px;
+              font-size: 14px;
+              width: 80%; }
+          .g-wrap .m-main-chy .con .left .form1 .form-group .btn {
+            padding-left: 30%;
+            float: left;
+            width: 100%; }
+            .g-wrap .m-main-chy .con .left .form1 .form-group .btn button {
+              width: 80%;
+              padding: 6px 0;
+              border: none;
+              background: #538700;
+              color: #fff;
+              font-size: 14px; }
+      .g-wrap .m-main-chy .con .right {
+        float: right;
+        padding: 100px;
+        width: 50%;
+        color: #fff;
+        background: #11cfff; }
+
+.m-main-cy {
+  padding-top: 80px;
+  background: #333; }
+  @media (max-width: 1900px) {
+    .m-main-cy {
+      padding-bottom: 80px; } }
+  .m-main-cy .container {
+    width: 30%;
+    margin: 0 auto; }
+
+.m-main-cy .title {
+  margin-top: 35px;
+  padding-bottom: 42px;
+  border-bottom: 1px solid #ffe3cd;
+  text-align: center;
+  font-size: 24px;
+  color: #ffe3cd;
+  font-family: "宋体";
+  font-weight: normal; }
+
+.m-main-cy .prompt {
+  position: relative;
+  margin-top: 7px;
+  padding-left: 12px;
+  font-size: 16px;
+  color: #ffe3cd;
+  font-family: "宋体";
+  font-weight: normal; }
+  .m-main-cy .prompt span {
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    left: 0; }
+
+.m-main-cy .register-form {
+  padding-top: 43px; }
+  .m-main-cy .register-form .form-group {
+    margin-bottom: 25px;
+    position: relative; }
+    .m-main-cy .register-form .form-group label {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 6px;
+      font-size: 16px;
+      color: #ffe3cd;
+      font-family: "宋体";
+      font-weight: normal; }
+      .m-main-cy .register-form .form-group label span {
+        display: inline-block;
+        position: absolute;
+        top: -6px;
+        right: -8px; }
+    .m-main-cy .register-form .form-group .form-control {
+      display: block;
+      width: 100%;
+      height: 38px;
+      padding: 6px;
+      background-image: url(about:blank);
+      background-color: transparent;
+      border: 1px solid #ffe3cd;
+      border-radius: 0;
+      color: #ffe3cd; }
+    .m-main-cy .register-form .form-group p {
+      position: absolute;
+      right: 0;
+      bottom: -18px;
+      visibility: hidden; }
+  .m-main-cy .register-form .warning .form-control {
+    border: 1px solid #ff0000; }
+  .m-main-cy .register-form .warning p {
+    visibility: visible;
+    text-align: right;
+    font-family: "宋体";
+    font-size: 12px;
+    color: #e60012; }
+  .m-main-cy .register-form .form-check {
+    padding-bottom: 13px;
+    padding-top: 13px;
+    border-bottom: 1px solid #ffe3cd; }
+    .m-main-cy .register-form .form-check label {
+      font-size: 16px;
+      color: #ffe3cd;
+      font-family: "宋体";
+      font-weight: normal; }
+    .m-main-cy .register-form .form-check label input {
+      display: inline-block;
+      margin-right: 5px;
+      background: none;
+      border: 1px solid #ffe3cd;
+      border-radius: 0; }
+  .m-main-cy .register-form p.button {
+    margin-top: 43px;
+    text-align: center;
+    padding-bottom: 48px; }
+    .m-main-cy .register-form p.button .btn {
+      padding: 10px;
+      background: #44332c;
+      border-radius: 0px;
+      border: none;
+      color: #ffe3cd;
+      font-family: "宋体";
+      outline: none; }
+      .m-main-cy .register-form p.button .btn:hover {
+        color: #714e38; }
+
+/*//下拉性别
+.sexnone{display: none;}
+.wrap-select{
+  position: relative;width: 100%;cursor: pointer;height: 38px;
+}
+
+.wrap-select .select{
+  height: 36px;width: 100%;line-height:26px; color:#ffe3cd;border: 1px solid #ffe3cd;padding-left: 10px; padding-top: 5px;cursor: pointer;position: relative;background:url(about:blank);
+
+}
+.wrap-select ul{
+  display: none;
+  border: 1px solid #ccc;
+  position: absolute;top: 35px; left:0;background: #ffe3cd; width: 100%;
+
+  */
+/*display: none;*/
+                    /*
+*/
+/*position: absolute;*/
+                         /*
+*/
+/*left: 0;*/
+              /*
+*/
+/*top: 32px;*/
+                  /*
+}
+.wrap-select ul li{
+  height: 32px;
+  line-height: 32px;
+  cursor: pointer;
+  color:#32251f;
+  padding-left: 10px;
+}
+.wrap-select ul li:hover{
+  background: #d7bca0;
+}
+.privacy{text-decoration:underline; color:#ffe3cd;
+
+  &:hover{
+    color:#ffe3cd;
+  }
+}
+
+.m-privacy.modal{
+  width: 700px;margin: 0 auto;
+  .modal-dialog{
+    width: 100%;
+    .modal-content{
+      background: #251f20;
+      padding: 30px;
+      .modal-title{font-size: 20px;
+        color: #ffe3cd;
+        margin-bottom: 30px;
+        font-family: "宋体";
+        font-weight: normal;}
+
+    }
+    .modal-body{
+      p{
+        margin-bottom: 30px;
+        font-size: 12px;
+        color: #ffe3cd;
+        font-family: "宋体";
+        font-weight: normal;
+        line-height: 2.2;
+      }
+
+    }
+    .modal-header{border-bottom: 0; padding: 0;}
+  }*/
+
+/*# sourceMappingURL=main.css.map */

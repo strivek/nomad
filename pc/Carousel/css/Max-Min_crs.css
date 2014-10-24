@@ -1,0 +1,22 @@
+
+*{margin: 0; padding: 0; list-style: none;outline:none;}
+.flexslider {width:400px;border: 1px solid #999; position: relative; zoom: 1; }
+.flexslider .slides img {width: 100%; display: block;}
+.slides:after ,.slide:before{content: "."; display: block;  }
+.slide:after{clear: both;}
+.flex-viewport { -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
+.flexslider .slides { zoom: 1; }
+.carousel li { margin-right: 5px; }
+
+/*左右按钮*/
+.flex-direction-nav {*height: 0;}
+.flex-direction-nav a  { position: absolute; top: 50%;text-decoration:none; display: block; width: 40px; height: 40px; margin: -20px 0 0;  z-index: 10; overflow: hidden; opacity: 0; cursor: pointer; color: rgba(0,0,0,0.8);  -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease; }
+.flex-direction-nav .flex-prev { left: -50px; }
+.flex-direction-nav .flex-next { right: -50px; text-align: right; }
+.flexslider:hover .flex-prev { opacity: 0.7; left: 10px; }
+.flexslider:hover .flex-next { opacity: 0.7; right: 10px; }
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 1; }
+@media screen and (max-width: 860px) {
+    .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
+    .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
+}

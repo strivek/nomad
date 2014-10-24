@@ -1,0 +1,311 @@
+@charset "UTF-8";
+/* reset */
+html, body, h1, h2, h3, h4, h5, h6, div, dl, dt, dd, ul, ol, li, p, blockquote, pre, hr, figure, table, caption, th, td, form, fieldset, legend, input, button, textarea, menu {
+  margin: 0;
+  padding: 0; }
+
+header, footer, section, article, aside, nav, hgroup, address, figure, figcaption, menu, details {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th {
+  text-align: left;
+  font-weight: normal; }
+
+html, body, fieldset, img, iframe, abbr {
+  border: 0; }
+
+i, cite, em, var, address, dfn {
+  font-style: normal; }
+
+[hidefocus], summary {
+  outline: 0; }
+
+li {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6, small {
+  font-size: 100%; }
+
+sup, sub {
+  font-size: 83%; }
+
+pre, code, kbd, samp {
+  font-family: inherit; }
+
+q:before, q:after {
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+label, summary {
+  cursor: default; }
+
+a, button {
+  cursor: pointer; }
+
+h1, h2, h3, h4, h5, h6, em, strong, b {
+  font-weight: bold; }
+
+del, ins, u, s, a, a:hover {
+  text-decoration: none; }
+
+body, textarea, input, button, select, keygen, legend {
+  font: 12px/1.14 arial, \5b8b\4f53;
+  color: #333;
+  outline: 0; }
+
+body {
+  background: #fff; }
+
+a, a:hover {
+  color: #333; }
+
+.clearfix {
+  zoom: 1; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.m-slideTxtBox {
+  width: 450px;
+  margin: 50px auto;
+  border: 1px solid #ddd; }
+  .m-slideTxtBox .hd {
+    height: 30px;
+    line-height: 30px;
+    background: #f4f4f4;
+    padding: 0 10px 0 20px;
+    border-bottom: 1px solid #ddd;
+    position: relative; }
+    .m-slideTxtBox .hd .arrow {
+      position: absolute;
+      right: 10px;
+      top: 0; }
+      .m-slideTxtBox .hd .arrow a {
+        display: block;
+        width: 5px;
+        height: 9px;
+        float: right;
+        margin-right: 5px;
+        margin-top: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        background: url("../images/arrow.png") 0 0 no-repeat; }
+      .m-slideTxtBox .hd .arrow .next {
+        background-position: 0 -50px; }
+    .m-slideTxtBox .hd ul {
+      position: absolute;
+      left: 20px;
+      top: -1px;
+      height: 32px; }
+      .m-slideTxtBox .hd ul li {
+        float: left;
+        padding: 0 15px;
+        cursor: pointer; }
+        .m-slideTxtBox .hd ul li.on {
+          background: #fff;
+          height: 30px;
+          border: 1px solid #ddd;
+          border-bottom: 1px solid #fff; }
+  .m-slideTxtBox .bd ul {
+    padding: 15px;
+    zoom: 1; }
+    .m-slideTxtBox .bd ul li {
+      height: 24px;
+      line-height: 24px; }
+      .m-slideTxtBox .bd ul li a {
+        text-decoration: none;
+        color: #333; }
+      .m-slideTxtBox .bd ul li a:hover {
+        color: #1974A1; }
+      .m-slideTxtBox .bd ul li .date {
+        float: right;
+        color: #999; }
+
+.m-slideBox {
+  width: 450px;
+  margin: 50px auto;
+  position: relative;
+  /* 下面是前/后按钮代码，如果不需要删除即可 */ }
+  .m-slideBox .hd {
+    height: 15px;
+    overflow: hidden;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 1; }
+    .m-slideBox .hd ol {
+      overflow: hidden;
+      float: left; }
+    .m-slideBox .hd li {
+      float: left;
+      margin-right: 4px;
+      width: 15px;
+      height: 15px;
+      line-height: 14px;
+      text-align: center;
+      background: #fff;
+      cursor: pointer; }
+      .m-slideBox .hd li.on {
+        background: #f00;
+        color: #fff; }
+  .m-slideBox .bd {
+    position: relative;
+    height: 100%;
+    z-index: 0; }
+    .m-slideBox .bd li {
+      zoom: 1;
+      vertical-align: middle; }
+      .m-slideBox .bd li img {
+        width: 100%;
+        display: block; }
+  .m-slideBox .prev, .m-slideBox .next {
+    position: absolute;
+    left: 3%;
+    top: 50%;
+    margin-top: -25px;
+    display: block;
+    width: 32px;
+    height: 40px;
+    background: url(../images/slider-arrow.png) -110px 5px no-repeat;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    z-index: 10; }
+  .m-slideBox .next {
+    left: auto;
+    right: 3%;
+    background-position: 8px 5px; }
+  .m-slideBox .prev:hover, .m-slideBox .next:hover {
+    filter: alpha(opacity=100);
+    opacity: 1; }
+  .m-slideBox .prevStop, .m-slideBox .nextStop {
+    display: none; }
+
+.m-picScroll-left {
+  width: 450px;
+  margin: 50px auto;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  position: relative; }
+  .m-picScroll-left .hd {
+    overflow: hidden;
+    height: 30px;
+    background: #f4f4f4;
+    padding: 0 10px;
+    position: relative; }
+    .m-picScroll-left .hd .prev, .m-picScroll-left .hd .next {
+      display: block;
+      width: 5px;
+      height: 9px;
+      float: right;
+      margin-right: 5px;
+      margin-top: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      background: url("../images/arrow.png") no-repeat; }
+    .m-picScroll-left .hd .next {
+      background-position: 0 -50px; }
+    .m-picScroll-left .hd .prevStop {
+      background-position: -60px 0; }
+    .m-picScroll-left .hd .nextStop {
+      background-position: -60px -50px; }
+    .m-picScroll-left .hd .pageState {
+      position: absolute;
+      left: 10px;
+      top: 6px; }
+    .m-picScroll-left .hd ul {
+      float: right;
+      overflow: hidden;
+      zoom: 1;
+      margin-top: 10px; }
+      .m-picScroll-left .hd ul li {
+        float: left;
+        width: 9px;
+        height: 9px;
+        overflow: hidden;
+        margin-right: 5px;
+        text-indent: -999px;
+        cursor: pointer;
+        background: url("../images/icoCircle.gif") 0 -9px no-repeat; }
+      .m-picScroll-left .hd ul li.on {
+        background-position: 0 0; }
+  .m-picScroll-left .bd {
+    padding: 10px; }
+    .m-picScroll-left .bd ul li {
+      margin: 0 8px;
+      float: left;
+      _display: inline;
+      overflow: hidden;
+      text-align: center; }
+      .m-picScroll-left .bd ul li .pic {
+        text-align: center; }
+        .m-picScroll-left .bd ul li .pic img {
+          width: 120px;
+          height: 90px;
+          display: block;
+          padding: 2px;
+          border: 1px solid #ccc; }
+        .m-picScroll-left .bd ul li .pic a:hover img {
+          border-color: #999; }
+      .m-picScroll-left .bd ul li .title {
+        line-height: 24px; }
+
+.m-Marquee {
+  width: 450px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #ccc;
+  margin: 50px auto; }
+  .m-Marquee .hd {
+    height: 30px;
+    background: #f4f4f4;
+    padding: 0 10px; }
+    .m-Marquee .hd .prev, .m-Marquee .hd .next {
+      display: block;
+      width: 5px;
+      height: 9px;
+      float: right;
+      margin-right: 5px;
+      margin-top: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      background: url("../images/arrow.png") no-repeat; }
+    .m-Marquee .hd .next {
+      background-position: 0 -50px; }
+    .m-Marquee .hd .prevStop {
+      background-position: -60px 0; }
+    .m-Marquee .hd .nextStop {
+      background-position: -60px -50px; }
+  .m-Marquee .bd {
+    padding: 10px; }
+    .m-Marquee .bd ul li {
+      margin: 0 8px;
+      float: left;
+      _display: inline;
+      overflow: hidden;
+      text-align: center; }
+      .m-Marquee .bd ul li .pic {
+        text-align: center; }
+        .m-Marquee .bd ul li .pic img {
+          width: 120px;
+          height: 90px;
+          display: block;
+          padding: 2px;
+          border: 1px solid #ccc; }
+        .m-Marquee .bd ul li .pic a:hover img {
+          border-color: #999; }
+      .m-Marquee .bd ul li .title {
+        line-height: 24px; }
+
+/*# sourceMappingURL=main.css.map */

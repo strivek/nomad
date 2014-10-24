@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh_EN">
+<head>
+    <meta charset="UTF-8">
+    <title>图片无缝滚动特效-左</title>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script type="text/javascript" src="js/jquery1.42.min.js"></script>
+    <script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+    <div class="m-Marquee">
+        <div class="hd clearfix">
+            <a class="next"></a>
+            <a class="prev"></a>
+        </div>
+        <div class="bd">
+            <ul class="picList clearfix">
+                <li>
+                    <div class="pic"><a href="#" target="_blank"><img src="images/pic1.jpg" /></a></div>
+                    <div class="title"><a href="#" target="_blank">效果图1</a></div>
+                </li>
+                <li>
+                    <div class="pic"><a href="#" target="_blank"><img src="images/pic2.jpg" /></a></div>
+                    <div class="title"><a href="#" target="_blank">效果图2</a></div>
+                </li>
+                <li>
+                    <div class="pic"><a href="#" target="_blank"><img src="images/pic3.jpg" /></a></div>
+                    <div class="title"><a href="#" target="_blank">效果图3</a></div>
+                </li>
+                <li>
+                    <div class="pic"><a href="#" target="_blank"><img src="images/pic4.jpg" /></a></div>
+                    <div class="title"><a href="#" target="_blank">效果图4</a></div>
+                </li>
+                <li>
+                    <div class="pic"><a href="#" target="_blank"><img src="images/pic5.jpg" /></a></div>
+                    <div class="title"><a href="#" target="_blank">效果图5</a></div>
+                </li>
+                <li>
+                    <div class="pic"><a href="#" target="_blank"><img src="images/pic6.jpg" /></a></div>
+                    <div class="title"><a href="#" target="_blank">效果图6</a></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        jQuery(".m-Marquee").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:3,interTime:50});
+    </script>
+
+</body>
+</html>

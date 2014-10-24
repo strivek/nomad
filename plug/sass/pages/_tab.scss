@@ -1,0 +1,50 @@
+@charset "utf-8";
+.m-slideTxtBox{width: 450px;margin: 50px auto;border: 1px solid #ddd;
+  .hd{
+//    头部高度设置
+    height: 30px;
+    line-height: 30px;
+    background: #f4f4f4;
+    padding: 0 10px 0 20px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+//    相对定位
+    //如果没有左右按钮可删arrow
+    .arrow{
+      position: absolute;
+      right: 10px;
+      top:0;
+      a{
+        display: block;
+        width: 5px;
+        height: 9px;
+        float: right;
+        margin-right: 5px;
+        margin-top: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        background: url("../images/arrow.png") 0 0 no-repeat;
+      }
+      .next{ background-position:0 -50px; }
+
+
+    }
+
+    ul{position: absolute;left: 20px;top:-1px;height: 32px;
+//      background: red; 用背景测试
+//      top-1因为边框为1，高32父级内容高度和边框
+      li{float: left; padding: 0 15px; cursor: pointer;
+        &.on{background: #fff;height: 30px;border: 1px solid #ddd; border-bottom: 1px solid #fff;}
+      }
+    }
+  }
+//  内容区域
+  .bd ul{padding:15px;  zoom:1;
+    li{ height:24px; line-height:24px;
+      a{ text-decoration:none; color:#333;}
+      a:hover{ color:#1974A1;  }
+      .date{ float:right; color:#999;}
+    }
+  }
+
+}

@@ -1,0 +1,20 @@
+@charset "utf-8";
+.m-slideBox{width: 450px;margin: 50px auto; position: relative;
+  .hd{height:15px; overflow:hidden; position:absolute; right:10px; bottom:10px; z-index:1;
+    ol{overflow: hidden; float: left;}
+    li{float:left; margin-right:4px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer;
+      &.on{background:#f00; color:#fff;}
+    }
+  }
+  .bd{position:relative; height:100%; z-index:0;
+    li{zoom:1; vertical-align:middle;
+      img{width: 100%;display: block;}
+    }
+  }
+
+  /* 下面是前/后按钮代码，如果不需要删除即可 */
+   .prev,.next{ position:absolute; left:3%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(../images/slider-arrow.png) -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5; z-index: 10;   }
+  .next{ left:auto; right:3%; background-position:8px 5px; }
+  .prev:hover,.next:hover{ filter:alpha(opacity=100);opacity:1;  }
+.prevStop,.nextStop{ display:none;  }
+}

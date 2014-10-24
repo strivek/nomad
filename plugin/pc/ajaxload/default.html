@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>ajaxload - default</title>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="example">
+    <ul>
+        <li><a href=""><span>2014-10-24</span>When doing an XHR request, Internet Explorer will cache the response.</a></li>
+        <li><a href=""><span>2014-10-24</span>static content with a long shelf life, caching may be a good thing. </a></li>
+        <li><a href=""><span>2014-10-24</span>you will want to make sure that the request is not cached by the browser.</a></li>
+        <li><a href=""><span>2014-10-24</span>One possible solution is to append a unique query string value to the end of the URL.</a></li>
+        <li><a href=""><span>2014-10-24</span>This will ensure that for each request the browser is requesting a unique URL.</a></li>
+    </ul>
+</div>
+<script src="lib/jquery.min.js"></script>
+<script src="ajaxload.js"></script>
+<script>
+    $(function(){
+        //alert(1);
+    })
+</script>
+</body>
+</html>

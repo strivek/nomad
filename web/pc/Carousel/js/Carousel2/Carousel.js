@@ -1151,4 +1151,5 @@ define(["jquery"],function($){
             }
         };
     })(jQuery);
+
 })

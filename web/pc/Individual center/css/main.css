@@ -1,0 +1,135 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none; }
+
+.m-main-chy {
+  margin: 10px; }
+  .m-main-chy:after {
+    display: block;
+    content: "";
+    clear: both;
+    overflow: hidden; }
+  .m-main-chy #container2 {
+    float: left;
+    width: 100%;
+    position: relative;
+    overflow: hidden; }
+  .m-main-chy #container1 {
+    float: left;
+    width: 100%;
+    background: #eeeeee;
+    position: relative;
+    right: 30%; }
+  .m-main-chy #col1 {
+    float: left;
+    position: relative;
+    left: 30%; }
+  .m-main-chy #col2 {
+    float: left;
+    position: relative;
+    left: 31%; }
+  .m-main-chy .left {
+    position: relative;
+    float: left;
+    width: 300px;
+    margin-right: -300px;
+    z-index: 100; }
+    .m-main-chy .left .des {
+      text-align: center; }
+      .m-main-chy .left .des:after {
+        display: block;
+        content: "";
+        clear: both;
+        overflow: hidden; }
+      .m-main-chy .left .des img {
+        width: 100px;
+        height: 100px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%; }
+      .m-main-chy .left .des .name {
+        display: block;
+        margin-top: 10px;
+        width: 100%;
+        font-size: 16px;
+        font-family: "宋体"; }
+    .m-main-chy .left .list {
+      margin-top: 40px; }
+      .m-main-chy .left .list ul {
+        list-style: none; }
+        .m-main-chy .left .list ul li a {
+          display: block;
+          padding: 10px 0;
+          text-align: center;
+          color: #000;
+          border-bottom: 1px solid #999; }
+          .m-main-chy .left .list ul li a:hover {
+            background: #fff; }
+  .m-main-chy .right {
+    float: right;
+    width: 100%;
+    z-index: 99; }
+    .m-main-chy .right .con {
+      margin-left: 320px;
+      background: #f9f9f9; }
+      .m-main-chy .right .con .title {
+        padding: 20px 20px;
+        font-size: 24px;
+        font-weight: normal;
+        border-bottom: 1px solid #e0e0e0; }
+      .m-main-chy .right .con .form1 {
+        margin-top: 40px; }
+        .m-main-chy .right .con .form1 .formList {
+          margin-top: 20px;
+          width: 330px; }
+          .m-main-chy .right .con .form1 .formList .l_wen {
+            display: inline-block;
+            width: 100px;
+            text-align: right; }
+          .m-main-chy .right .con .form1 .formList .r_shu {
+            display: inline-block;
+            width: 200px;
+            height: 26px;
+            font-size: 14px;
+            padding: 4px 0 4px 10px; }
+          .m-main-chy .right .con .form1 .formList .r_wrap {
+            display: inline-block;
+            width: 100px;
+            position: relative; }
+            .m-main-chy .right .con .form1 .formList .r_wrap .show {
+              width: 100px;
+              cursor: pointer;
+              height: 24px;
+              border: 1px solid black;
+              padding: 4px 0 4px 10px;
+              text-align: left;
+              line-height: 24px;
+              background: #fff; }
+            .m-main-chy .right .con .form1 .formList .r_wrap .list {
+              position: absolute;
+              top: 34px;
+              left: 0;
+              width: 110px;
+              background: #e0e0e0;
+              display: none; }
+              .m-main-chy .right .con .form1 .formList .r_wrap .list li a {
+                display: block;
+                padding: 4px 0 4px 10px;
+                text-align: left;
+                color: #000; }
+        .m-main-chy .right .con .form1 .formBut {
+          margin-top: 40px;
+          text-align: right;
+          width: 320px; }
+          .m-main-chy .right .con .form1 .formBut button {
+            padding: 6px 13px;
+            border: none;
+            background: #11cfff;
+            color: #fff;
+            outline: none;
+            cursor: pointer; }
+
+/*# sourceMappingURL=main.css.map */

@@ -21,7 +21,15 @@ body{background:#fff;}
 a,a:hover{color:#333;}
 
 .temp {
-    height: 715px;
+    display: block;
+    margin: 0 auto;
+    padding: 100px;
+    width: 400px;
+}
+.temp h1 {
+    margin-bottom: 20px;
+    line-height: 30px;
+    border-bottom: 1px solid #333;
 }
 .example {
     margin: 20px auto;

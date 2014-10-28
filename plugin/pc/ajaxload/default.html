@@ -6,7 +6,26 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<div class="temp"></div>
+<div class="temp">
+    <h1>README</h1>
+    <pre>
+        $.ajaxLoadMore({
+            url:'json/data.json'
+        });
+
+        AjaxLoadMore.defaults = {
+
+            url: '',
+            type: 'POST',
+            cache: false,
+            perPage: 5,
+            totalPages: 3,
+            container: $(".j-data"),
+            btn: $(".j-load")
+
+        };
+    </pre>
+</div>
 <div class="example">
     <ul class="j-data">
         <li><a href=""><span>2014-10-24</span>When doing an XHR request, Internet Explorer will cache the response.</a></li>

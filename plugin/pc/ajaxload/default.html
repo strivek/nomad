@@ -6,21 +6,37 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+<div class="temp">
+    <h1>README</h1>
+    <pre>
+        $.ajaxLoadMore({
+            url:'json/data.json'
+        });
+
+        AjaxLoadMore.defaults = {
+
+            url: '',
+            type: 'POST',
+            cache: false,
+            perPage: 5,
+            totalPages: 3,
+            container: $(".j-data"),
+            btn: $(".j-load")
+
+        };
+    </pre>
+</div>
 <div class="example">
-    <ul>
+    <ul class="j-data">
         <li><a href=""><span>2014-10-24</span>When doing an XHR request, Internet Explorer will cache the response.</a></li>
         <li><a href=""><span>2014-10-24</span>static content with a long shelf life, caching may be a good thing. </a></li>
         <li><a href=""><span>2014-10-24</span>you will want to make sure that the request is not cached by the browser.</a></li>
         <li><a href=""><span>2014-10-24</span>One possible solution is to append a unique query string value to the end of the URL.</a></li>
         <li><a href=""><span>2014-10-24</span>This will ensure that for each request the browser is requesting a unique URL.</a></li>
     </ul>
+    <a class="j-load u-loadBtn">load more</a>
 </div>
-<script src="lib/jquery.min.js"></script>
-<script src="ajaxload.js"></script>
-<script>
-    $(function(){
-        //alert(1);
-    })
-</script>
+<div class="temp"></div>
+<script data-main="javascript/main" src="javascript/require.js"></script>
 </body>
 </html>

@@ -20,6 +20,17 @@ body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;
 body{background:#fff;}
 a,a:hover{color:#333;}
 
+.temp {
+    display: block;
+    margin: 0 auto;
+    padding: 100px;
+    width: 400px;
+}
+.temp h1 {
+    margin-bottom: 20px;
+    line-height: 30px;
+    border-bottom: 1px solid #333;
+}
 .example {
     margin: 20px auto;
     width: 800px;
@@ -36,4 +47,13 @@ a,a:hover{color:#333;}
 }
 .example ul li a span {
     float: right;
+}
+
+.u-loadBtn {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
 }

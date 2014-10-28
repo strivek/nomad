@@ -1,5 +1,64 @@
 ;(function($, window, undefined) {
 
+    var AjaxLoad = function(options) {
+
+        this.opts = $.extend({}, AjaxLoad.defaults, options);
+
+        //this.init();
+
+    };
+
+    AjaxLoad.prototype = {
+
+        /*init : function(){
+
+        },*/
+
+        getData : function(){
+            var request = $.ajax({
+                type: "POST",
+                url: opts.url,
+                data: { pageCount: pageCount, pageNum: pageNum }//让服务器端知晓，目前处于第一页，每页有多少条
+            });
+
+
+            request.done(function (data) {
+                var html = '';
+                $.each(data, function (idx, news) {
+                    html += '<a class="link" target="_blank" href="' + news.link + '"><span>查看详情</span>' + news.title + '</a>';
+                });
+                dataBox.append(html);
+
+
+            });
+            request.fail(function (data) {
+                window.reload();
+                console.log("debug:" + data);
+            });
+            request.always(function (data) {
+
+            });
+        },
+
+        creatHtml : function(){
+
+        }
+    };
+
+    AjaxLoad.defaults = {
+
+        url : '',
+        ajaxTimes : 0,
+        ajaxPages : 'infinite',
+        getJson : null,
+        creatHtml : null
+
+    }
+
+})(window.jQuery || window.Zepto, window);
+
+/*;(function($, window, undefined) {
+
     var win = $(window),
         doc = $(document),
         count = 1,
@@ -15,9 +74,9 @@
 
     Dialog.prototype = {
 
-        /**
+        *//**
          * 初始化
-         */
+         *//*
         init : function() {
 
             this.create();
@@ -32,9 +91,9 @@
 
         },
 
-        /**
+        *//**
          * 创建
-         */
+         *//*
         create : function() {
 
             var divHeader = (this.settings.title==null)?'':'<div class="rDialog-header-'+ this.settings.title +'"></div>';
@@ -67,9 +126,9 @@
 
         },
 
-        /**
+        *//**
          * ok
-         */
+         *//*
         ok : function() {
             var _this = this,
                 footer = this.dialog.find('.rDialog-footer');
@@ -87,9 +146,9 @@
 
         },
 
-        /**
+        *//**
          * cancel
-         */
+         *//*
         cancel : function() {
 
             var _this = this,
@@ -107,9 +166,9 @@
 
         },
 
-        /**
+        *//**
          * 设置大小
-         */
+         *//*
         size : function() {
 
             var content = this.dialog.find('.rDialog-content'),
@@ -122,9 +181,9 @@
             //wrap.width(content.width());
         },
 
-        /**
+        *//**
          * 设置位置
-         */
+         *//*
         position : function() {
 
             var _this = this,
@@ -139,9 +198,9 @@
 
         },
 
-        /**
+        *//**
          * 设置锁屏
-         */
+         *//*
         lock : function() {
 
             if (isLock) return;
@@ -153,9 +212,9 @@
 
         },
 
-        /**
+        *//**
          * 关闭锁屏
-         */
+         *//*
         unLock : function() {
             if (this.settings.lock) {
                 if (isLock) {
@@ -165,17 +224,17 @@
             }
         },
 
-        /**
+        *//**
          * 关闭方法
-         */
+         *//*
         close : function() {
             this.dialog.remove();
             this.unLock();
         },
 
-        /**
+        *//**
          * 定时关闭
-         */
+         *//*
         time : function() {
 
             var _this = this;
@@ -188,9 +247,9 @@
 
     }
 
-    /**
+    *//**
      * 默认配置
-     */
+     *//*
     Dialog.defaults = {
 
         // 内容
@@ -236,15 +295,12 @@
 
 })(window.jQuery || window.Zepto, window);
 
-
 (function($){
 
     $.fn.ajaxLoad = function (options) {
 
         var opts = $.extend({}, $.fn.ajaxLoad.defaults, options),
             ajaxTimes = 0,
-            isLoading = false,
-            isFinish = false,
 
             ajaxFunc = $.isFunction(opts.ajaxFunc) ?
                 opts.ajaxFunc :
@@ -267,15 +323,12 @@
                 };
 
         function getJSONData(){
-            if(!(isLoading || isFinish)){
-                if(ops.ajaxTimes === 'infinite' || ajaxTimes < opts.ajaxTimes){
-                    opts.params.ajax = ++ajaxTimes;
-                    ajaxFunc(
-                        function (jsonData){
-
-                        }
-                    );
-                }
+            if(ops.ajaxTimes === 'infinite' || ajaxTimes < opts.ajaxTimes){
+                opts.params.ajax = ++ajaxTimes;
+                ajaxFunc(
+                    function (jsonData){
+                    }
+                );
             }
         }
     };
@@ -284,71 +337,54 @@
 
         url : '',
         perNum : 'auto',
-        isAnimation: true,
         ajaxTimes: 'infinite',
         ajaxFunc: null,
         creatHtml: null
 
     };
 
-})(jQuery);
+})(jQuery);*/
 
 //ajax load
-var newsLoadBtn = $('.j-loadnews');
-var newsPageCount = 5;
-var newsPageLength = 3;
+var loadBtn = $('.j-load');
+var dataBox = $('.j-data');
+var pageCount = 5;
+var pageLength = 3;
 
-var loadNewsHeight = (parseInt($('.j-newsbox .link').css('height')) + 1) * 5;
+loadBtn.on("click", loadData);
 
-var scroll = {
-    newsScrollTop : null
-};
+function loadData(event) {
 
-$(".j-loadnews").on("click", loadnews);
+    pageNum = $(".j-load").data("pageNum");
 
-function loadnews(event) {
-
-    pageNum = $(".j-loadnews").data("pageNum");
-
-    if (newsLoadBtn.data("pageNum") == 1){
-        scroll.newsScrollTop = $(window).scrollTop();
-    }
-
-    if (pageNum < newsPageLength) {
-
-        $(document.body).animate({'scrollTop':'+='+loadNewsHeight},500);
-        //加载数据
+    if (pageNum < pageLength) {
 
         var request = $.ajax({
             type: "POST",
-            url: "json/newsData.json",
-            data: { newsPageCount: newsPageCount, pageNum: pageNum }//让服务器端知晓，目前处于第一页，每页有多少条
+            url: "json/data.json",
+            data: { pageCount: pageCount, pageNum: pageNum }//让服务器端知晓，目前处于第一页，每页有多少条
         });
 
 
-        request.done(function (msg) {
-            if (msg.status === "success") {
-                var dataNews = '';
-                $.each(msg.data, function (idx, news) {
-                    dataNews += '<a class="link" target="_blank" href="' + news.link + '"><span>查看详情</span>' + news.title + '</a>';
-                });
-                $('.j-newsbox').append(dataNews);
-            } else {
-                pageInit();
-            }
+        request.done(function (data) {
+            var html = '';
+            $.each(data, function (idx, news) {
+                html += '<a class="link" target="_blank" href="' + news.link + '"><span>查看详情</span>' + news.title + '</a>';
+            });
+            dataBox.append(html);
 
 
         });
-        request.fail(function (msg) {
+        request.fail(function (data) {
             window.reload();
-            console.log("debug:" + msg);
+            console.log("debug:" + data);
         });
-        request.always(function (msg) {
+        request.always(function (data) {
 
         });
-        newsLoadBtn.data("pageNum", pageNum + 1);
-        if (newsLoadBtn.data("pageNum") == 3){
-            newsLoadBtn.addClass('u-load-h').find('span').text('收起');
+        loadBtn.data("pageNum", pageNum + 1);
+        if (loadBtn.data("pageNum") == pageLength){
+            loadBtn.text('no more');
         }
     }
     else {
@@ -360,7 +396,8 @@ function loadnews(event) {
 }
 
 function pageInit() {
-    $(document.body).animate({'scrollTop':scroll.newsScrollTop},500);
-    $(".j-newsbox .link:gt(4)").remove();
-    newsLoadBtn.data("pageNum", 1).removeClass('u-load-h').find('span').text('展开');
+    dataBox.empty();
+    loadBtn.data("pageNum", 1).text('no more');
 }
+
+

@@ -5,19 +5,11 @@ define(['jquery'], function ($) {
         this.container = this.opts.container;
         this.btn = this.opts.btn;
         this.pageNum = 0;
-        //this.pageLens = 5;
-        //this.pageCount = this.opts.totalPages;
         this.init();
     };
     AjaxLoadMore.prototype.init = function () {
 
         this.btn.click($.proxy(this.loadData, this));//方法1
-
-    };
-
-    AjaxLoadMore.prototype.viewAll = function () {
-
-        alert('没了没了');
 
     };
 
@@ -28,11 +20,14 @@ define(['jquery'], function ($) {
 
             this.nextPage();
 
+            this.pageAnimate();
+
         } else {
 
             this.viewAll();
 
         }
+
     };
     AjaxLoadMore.prototype.nextPage = function () {
 
@@ -46,10 +41,15 @@ define(['jquery'], function ($) {
         var results = $.ajax({
             type: this.opts.type,
             url: this.opts.url,
+            cache: this.opts.cache,
             data: { perPage: this.opts.perPage, pages: this.pageNum }
         });
 
         this.pageNum++;
+
+        if(this.pageNum == this.opts.totalPages){
+            this.btn.text('view all');
+        }
 
         return results;
 
@@ -83,46 +83,25 @@ define(['jquery'], function ($) {
 
     };
 
+    AjaxLoadMore.prototype.viewAll = function () {
 
-    /*AjaxLoadMore.prototype.getCurrentPage = function () {
-        //可以加验证，判断是否为数字
-        //return this.btn.data("curPage");
-        return this.opts.times;
+        alert('no more!!');
 
     };
-    AjaxLoadMore.prototype.setCurrentPage = function (num) {
-        //返回值可以用来判断是否设置成功
-        //return this.btn.data('curPage', num+1);
-        return this.opts.times++;
 
-    };*/
+    AjaxLoadMore.prototype.pageAnimate = function () {
 
-//    AjaxLoadMore.prototype.getData = {
-//
-//        getData: function () {
-//
-//            var request = $.ajax({
-//                type: this.opts.type,
-//                url: this.opts.url,
-//                data: { perPage: this.opts.perPage, pages: this.opts.times }
-//            });
-//
-//            request.done(function (msg) {
-//                var data = '';
-//                $.each(msg, function (idx, news) {
-//                    data += '<li><a class="link" target="_blank" href="' + news.link + '"><span>' + news.date + '</span>' + news.title + '</a></li>';
-//                });
-//                $('.j-data').append(data);
-//            });
-//
-//        }
-//
-//    };
+        var loadHeight = (parseInt(this.container.children().css('height')) + 1) * this.opts.perPage;
+
+        $(document.body).animate({scrollTop : '+='+loadHeight},800);
+
+    };
 
     AjaxLoadMore.defaults = {
 
         url: '',
         type: 'POST',
+        cache: false,
         perPage: 5,
         totalPages: 3,
         container: $(".j-data"),

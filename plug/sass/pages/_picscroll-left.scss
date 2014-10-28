@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.m-picScroll-left{width: 450px;margin: 50px auto;border: 1px solid #ddd;overflow: hidden;position: relative;
+  .hd{ overflow:hidden;  height:30px; background:#f4f4f4; padding:0 10px;position: relative;
+    .prev,.next{ display:block;  width:5px; height:9px; float:right; margin-right:5px; margin-top:10px;  overflow:hidden;
+      cursor:pointer; background:url("../images/arrow.png") no-repeat;}
+    .next{ background-position:0 -50px;  }
+    .prevStop{ background-position:-60px 0; }
+    .nextStop{ background-position:-60px -50px; }
+    .pageState{position: absolute; left: 10px; top:6px;}
+    ul{float:right; overflow:hidden; zoom:1; margin-top:10px;
+      li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer; background:url("../images/icoCircle.gif") 0 -9px no-repeat; }
+      li.on{ background-position:0 0; }
+    }
+  }
+  .bd{ padding:10px;
+    ul li{margin:0 8px; float:left; _display:inline; overflow:hidden; text-align:center;
+      .pic{ text-align:center;
+        img{ width:120px; height:90px; display:block;  padding:2px; border:1px solid #ccc; }
+        a:hover img{ border-color:#999;  }
+      }
+      .title{ line-height:24px;   }
+    }
+  }
+
+
+}

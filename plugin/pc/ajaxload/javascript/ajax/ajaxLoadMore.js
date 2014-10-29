@@ -1,6 +1,6 @@
 define(['jquery'], function ($) {
 
-    var AjaxLoadMore = function (options) {
+    /*var AjaxLoadMore = function (options) {
         this.opts = $.extend({}, AjaxLoadMore.defaults, options);
         this.container = this.opts.container;
         this.btn = this.opts.btn;
@@ -114,6 +114,100 @@ define(['jquery'], function ($) {
         new AjaxLoadMore(options);
     };
 
-    window.rAjaxLoadMore = $.rAjaxLoadMore = $.ajaxLoadMore = rAjaxLoadMore;
+    window.rAjaxLoadMore = $.rAjaxLoadMore = $.ajaxLoadMore = rAjaxLoadMore;*/
+
+    $.fn.alm = function(options){
+
+        var opts = $.extend({}, $.fn.alm.defaults, options),
+            $this = $(this),
+            container = opts.container,
+            pageNum = 0;
+
+        function loadNext() {
+
+            var request = getData();
+
+            setData(request);
+
+        }
+
+        function getData() {
+
+            var results = $.ajax({
+                type: opts.type,
+                url: opts.url,
+                cache: opts.cache,
+                data: { perPage: opts.perPage, pages: pageNum }
+            });
+
+            pageNum++;
+
+            if(pageNum == opts.totalPages){
+                $this.text('没有更多了').attr('disabled', 'true');
+            }
+
+            return results;
+
+        }
+
+        function setData(dataRequest) {
+
+            dataRequest.done(function(data){
+
+                mixTemplate(data);
+
+                pageAnimate()
+
+            });
+
+            dataRequest.fail(function(data){
+
+                alert('加载失败');
+
+            })
+
+        }
+
+        function mixTemplate(data){
+
+            var dataBox = '';
+
+            $.each(data, function (idx, news) {
+                dataBox += '<li><a class="link" target="_blank" href="' + news.link + '"><span>' + news.date + '</span>' + news.title + '</a></li>';
+            });
+
+            container.append(dataBox);
+
+        }
+
+        function pageAnimate() {
+
+            var loadHeight = (parseInt(container.children().css('height')) + 1) * opts.perPage;// +1 : css border-bottom 1px
+
+            $(document.body).animate({scrollTop : '+='+loadHeight},800);
+
+        }
+
+        return this.each(function(){
+
+            $this.on('click', function(){
+                loadNext()
+            })
+
+        });
+
+    };
+
+    $.fn.alm.defaults = {
+
+        url: '',
+        type: 'POST',
+        cache: false,
+        perPage: 5,
+        totalPages: 3,
+        container: null,
+        btn: $(this)
+
+    }
 
 });

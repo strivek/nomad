@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>数字摇奖(老虎机)</title>
+    <script type="text/javascript" src="js/jquery-1.7.2-min.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <style>
+        html,body{margin:0;padding:0;overflow:hidden;}
+        body{background:url(images/body_bg.jpg) 0px 0px repeat-x #000;}
+        .main_bg{background:url(images/main_bg.jpg) top center no-repeat;height:1000px;}
+        .main{width:1000px;height:1000px;position:relative;margin:0 auto;}
+        .num_mask{background:url(images/num_mask.png) 0px 0px no-repeat;height:184px;width:740px;position:absolute;left:50%;top:340px;margin-left:-370px;z-index:9;}
+        .num_box{height:450px;width:750px;position:absolute;left:50%;top:340px;margin-left:-370px;z-index:8;overflow:hidden;text-align:center;}
+        .num{background:url(images/num.png) top center repeat-y;width:181px;height:265px;float:left;margin-right:6px;}
+        .btn{background:url(images/btn_start.png) 0px 0px no-repeat;width:264px;height:89px;position:absolute;left:50%;bottom:50px;margin-left:-132px;cursor:pointer;clear:both;}
+    </style>
+</head>
+<body>
+<div class="main_bg">
+    <div class="main">
+        <div id="res" style="text-align:center;margin-top:200px;color:#fff;"></div>
+        <div class="num_mask"></div>
+        <div class="num_box">
+            <div class="num"></div>
+            <div class="num"></div>
+            <div class="num"></div>
+            <div class="num"></div>
+            <div class="btn"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+
+    /*注释             BY                 覃*/
+
+    function numRand() {        //numRand()函数返回显示在每个框中的数字，比如如果返回1234，转盘上依次显示的就是1,2,3,4。在这里，这个数是随机的，根据要求，也可以人为设定返回数值
+        var x = 9999; //上限
+        var y = 1111; //下限
+        var rand = parseInt(Math.random() * (x - y + 1) + y);   //产生一个四位数长的随机数
+        return rand;
+    }
+    console.log(numRand());
+    var isBegin = false;    //默认isBegin为false，也就是可点击，这是为了启动第一次点击
+    $(function(){
+        var u = 265;    //由于产生的随机数的每一位都是1到9之间的值，实际的位置值肯定不是1到9的值的，需要乘以一个常量，一般是高度，乘法见”(u*60) - (u*num_arr[index])“那行
+        $('.btn').click(function(){
+            if(isBegin) return false;   //如果isBegin为true，则return返回，不运行动画(结合下一行的注释去理解)
+            isBegin = true;     //isBegin用来控制在一个动画没运动完成时阻止第二次点击，点击无效
+            $(".num").css('backgroundPositionY',0); //设置点击之后瞬间，也就是动画开始时的图片的位置，默认是用背景图片位置属性background-position-y控制的
+            var result = numRand();     //将numRand()的结果，也就是最终显示在转盘上的数字存储在result变量上
+            $('#res').text('result = '+result);     //与动画无关，就是显示在”result=“后面的数字
+            var num_arr = (result+'').split('');    //将numRand()函数返回的数字转化为分成单个数字的数组
+            $(".num").each(function(index){     //对每个滚轮进行一个for循环
+                var _num = $(this);     //将this指针保存
+                setTimeout(function(){  //setTimeout用来延迟四个动画的每一个执行，如何延迟、怎样延迟的原理在下面的"index * 300"上，解释见"index * 300"那行
+
+                    _num.animate({      //animate方法产生一个动画
+                        backgroundPositionY: (u*60) - (u*num_arr[index])    //运算位置的表达式,"num_arr[index]"是随机四位数的每一个数字值,index是索引，根据索引，输出相应的数字
+                    },{
+                        duration: 6000+index*3000,  //动画时间，根据不同的index输出不同的时间，index依次增大,因此从左往右的动画，动画时间越来越长
+                        easing: "easeInOutCirc",    //动画函数，详见easing.js里面的easeInOutCirc函数,可以根据需求配置不同的速度函数
+                        complete: function(){       //easeInOutCirc动画完成时执行的函数
+                            if(index==3) isBegin = false;   //如果index==3后，可点击第二次了,一个动画完成
+                            //var pos = _num.css('backgroundPositionY').replace('px','');
+                            //_num.css('backgroundPositionY',pos%u);
+                        }
+                    });
+                }, index * 300);    //根据不同的index，输出不同的延迟时间，index依次增大，因此延迟时间依次增长
+            });
+        });
+    });
+</script>

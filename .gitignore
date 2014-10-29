@@ -11,6 +11,8 @@
 *.swp
 *.zip
 *.vi
+*.css
+*.idea
 *~
 
 # OS or Editor folders

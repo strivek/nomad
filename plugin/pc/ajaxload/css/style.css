@@ -56,4 +56,10 @@ a,a:hover{color:#333;}
     height: 30px;
     line-height: 30px;
     text-align: center;
+    background: transparent;
+    border: none 0;
+}
+.u-loadBtn:disabled {
+    color: gray;
+    cursor: auto;
 }

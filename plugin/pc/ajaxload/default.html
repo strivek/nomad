@@ -9,10 +9,25 @@
 <div class="temp">
     <h1>README</h1>
     <pre>
+
+        one
+        ------------------------------
         $.ajaxLoadMore({
-            url:'json/data.json'
+            url:'json/data.json',
+            container: $(".j-data"),
+            btn: $(".j-load")
         });
 
+        two
+        ------------------------------
+        $.ajaxLoadMore({
+            url:'json/data1.json',
+            container: $(".j-data1"),
+            btn: $(".j-load1")
+        });
+
+        default setup
+        ------------------------------
         AjaxLoadMore.defaults = {
 
             url: '',
@@ -20,10 +35,11 @@
             cache: false,
             perPage: 5,
             totalPages: 3,
-            container: $(".j-data"),
-            btn: $(".j-load")
+            container: null,
+            btn: null
 
         };
+
     </pre>
 </div>
 <div class="example">
@@ -34,7 +50,17 @@
         <li><a href=""><span>2014-10-24</span>One possible solution is to append a unique query string value to the end of the URL.</a></li>
         <li><a href=""><span>2014-10-24</span>This will ensure that for each request the browser is requesting a unique URL.</a></li>
     </ul>
-    <a class="j-load u-loadBtn">load more</a>
+    <button class="j-load u-loadBtn">加载更多</button>
+</div>
+<div class="example">
+    <ul class="j-data1">
+        <li><a href=""><span>2014-10-24</span>When doing an XHR request, Internet Explorer will cache the response.</a></li>
+        <li><a href=""><span>2014-10-24</span>static content with a long shelf life, caching may be a good thing. </a></li>
+        <li><a href=""><span>2014-10-24</span>you will want to make sure that the request is not cached by the browser.</a></li>
+        <li><a href=""><span>2014-10-24</span>One possible solution is to append a unique query string value to the end of the URL.</a></li>
+        <li><a href=""><span>2014-10-24</span>This will ensure that for each request the browser is requesting a unique URL.</a></li>
+    </ul>
+    <button class="j-load1 u-loadBtn">加载更多</button>
 </div>
 <div class="temp"></div>
 <script data-main="javascript/main" src="javascript/require.js"></script>

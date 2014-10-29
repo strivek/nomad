@@ -9,7 +9,7 @@ define(['jquery'], function ($) {
     };
     AjaxLoadMore.prototype.init = function () {
 
-        this.btn.click($.proxy(this.loadData, this));//方法1
+        this.btn.click($.proxy(this.loadData, this));
 
     };
 
@@ -48,12 +48,13 @@ define(['jquery'], function ($) {
         this.pageNum++;
 
         if(this.pageNum == this.opts.totalPages){
-            this.btn.text('view all');
+            this.btn.text('没有更多了').attr('disabled', 'true');
         }
 
         return results;
 
     };
+
     AjaxLoadMore.prototype.setData = function(dataRequest){
 
         var that = this;
@@ -91,7 +92,7 @@ define(['jquery'], function ($) {
 
     AjaxLoadMore.prototype.pageAnimate = function () {
 
-        var loadHeight = (parseInt(this.container.children().css('height')) + 1) * this.opts.perPage;
+        var loadHeight = (parseInt(this.container.children().css('height')) + 1) * this.opts.perPage;// +1 : css border-bottom 1px
 
         $(document.body).animate({scrollTop : '+='+loadHeight},800);
 
@@ -104,8 +105,8 @@ define(['jquery'], function ($) {
         cache: false,
         perPage: 5,
         totalPages: 3,
-        container: $(".j-data"),
-        btn: $(".j-load")
+        container: null,
+        btn: null
 
     };
 

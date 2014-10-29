@@ -1,19 +1,14 @@
 require(['jquery'], function () {
     var $infm=$("#infm");
-    var $icon=$infm.find(".doubt");//鼠标滑过图标
-    var $pop=$infm.find(".pop");//鼠标滑过显示的提示信息
+    var $pop=$infm.find(".pop");
+    var $icon=$pop.find(".doubt");//鼠标滑过图标
+    var $pop_s=$pop.find(".pop_des");//鼠标滑过显示的提示信息
 
-    $icon.on('mouseenter',function(){
-        $(this).next().show();
+    $pop.on('mouseenter',function(){
+        $(this).find($pop_s).show();
     });
 
-
-
-    $icon.on('mouseleave',function(){
-        $(this).next().delay(500).hide(0);
+    $pop.on('mouseleave',function(){
+        $(this).find($pop_s).hide();
     });
-    $pop.on('mousemove',function(){
-       $(this).show();
-    });
-
 })

@@ -203,6 +203,11 @@ a, a:hover {
             outline: none;
             cursor: pointer; }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #f9f9f9; }
+
 .m-main1-chy {
   width: 100%; }
   .m-main1-chy .title {
@@ -219,7 +224,7 @@ a, a:hover {
       font-size: 40px;
       font-weight: bolder; }
   .m-main1-chy .wrap {
-    background: #f2f2f2;
+    background: #f9f9f9;
     width: 100%;
     overflow: hidden; }
     .m-main1-chy .wrap .main {
@@ -279,20 +284,21 @@ a, a:hover {
               color: #f2731d;
               font-size: 12px;
               font-weight: normal; }
-            .m-main1-chy .wrap .main .info .det_info .row .doubt {
-              display: inline-block;
-              width: 16px;
-              height: 16px;
-              background: url(../images/icos.png) left 1px no-repeat;
-              cursor: pointer; }
             .m-main1-chy .wrap .main .info .det_info .row .pop {
-              display: none;
-              position: relative; }
+              display: inline-block;
+              position: relative;
+              width: 100px; }
+              .m-main1-chy .wrap .main .info .det_info .row .pop .doubt {
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                background: url(../images/icos.png) left 1px no-repeat;
+                cursor: pointer; }
               .m-main1-chy .wrap .main .info .det_info .row .pop .pop_des {
+                display: none;
                 position: absolute;
-                top: -30px;
-                left: 10px;
-                display: inline-block; }
+                top: -20px;
+                left: 30px; }
                 .m-main1-chy .wrap .main .info .det_info .row .pop .pop_des .pop_bg {
                   position: absolute;
                   left: -11px;
@@ -319,13 +325,39 @@ a, a:hover {
                   box-shadow: 0 3px 3px #f0f0f0; }
       .m-main1-chy .wrap .main .bottom {
         margin-top: 60px;
-        padding-left: 60px; }
+        padding: 0 60px; }
         .m-main1-chy .wrap .main .bottom h2 {
           clear: both;
-          margin-bottom: 11px;
           border-bottom: 1px solid #FF7E00;
           padding-bottom: 11px;
           color: #FF7E00;
           font-weight: bold; }
+        .m-main1-chy .wrap .main .bottom .list {
+          margin-top: 22px; }
+          .m-main1-chy .wrap .main .bottom .list ul {
+            margin-right: -20px;
+            font-size: 0; }
+            .m-main1-chy .wrap .main .bottom .list ul li {
+              display: inline-block;
+              margin-right: 20px;
+              margin-bottom: 10px; }
+              .m-main1-chy .wrap .main .bottom .list ul li a {
+                display: block;
+                width: 138px;
+                height: 38px;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+                border: 1px solid #dadada;
+                line-height: 38px;
+                text-align: center;
+                background: url(../images/s_bgs.png) 0 -40px repeat-x;
+                font-size: 14px;
+                border: 1px solid #dadada; }
+                .m-main1-chy .wrap .main .bottom .list ul li a:hover {
+                  color: #fff;
+                  background-position: 0 0;
+                  -webkit-border-radius: 3px;
+                  border-radius: 3px;
+                  border: 1px solid #ff7e55; }
 
 /*# sourceMappingURL=main.css.map */

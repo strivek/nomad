@@ -1,9 +1,12 @@
 @charset "UTF-8";
+html,body{width: 100%;
+          height: 100%;
+ background:#f9f9f9;}
 .m-main1-chy{width: 100%;
   .title{width:100%; height:100px; border-bottom:1px solid #d9d9d9; background: #ececec;
           p{width: 900px; margin: 0 auto; height: 100px; line-height: 100px; color:#f2731d; font-size:40px; font-weight: bolder;}}
   .wrap {
-    background: #f2f2f2;
+    background: #f9f9f9;
     width: 100%;
     overflow: hidden;
     .main {
@@ -74,21 +77,23 @@
               font-size: 12px;
               font-weight: normal;
             }
-            .doubt {
-              display: inline-block;
-              width: 16px;
-              height: 16px;
-              background: url(../images/icos.png) left 1px no-repeat;
-              cursor: pointer;
-            }
+
             .pop {
-              display:none;
+              display:inline-block;
               position: relative;
-              .pop_des {
-                position: absolute;
-                top: -30px;
-                left: 10px;
+              width:100px;
+              .doubt {
                 display: inline-block;
+                width: 16px;
+                height: 16px;
+                background: url(../images/icos.png) left 1px no-repeat;
+                cursor: pointer;
+              }
+              .pop_des {
+                display:none;
+                position: absolute;
+                top: -20px;
+                left: 30px;
                 .pop_bg {
                   position: absolute;
                   left: -11px;
@@ -120,13 +125,17 @@
           }
         }
       }
-      .bottom{margin-top: 60px;padding-left: 60px;
-        h2{ clear:both;
-          margin-bottom: 11px;
-          border-bottom: 1px solid #FF7E00;
-          padding-bottom: 11px;
-          color: #FF7E00;
-          font-weight: bold;}
+      .bottom{margin-top: 60px;padding:0 60px;
+        h2{ clear:both;border-bottom: 1px solid #FF7E00;padding-bottom: 11px;color: #FF7E00; font-weight: bold;}
+        .list{margin-top: 22px;
+          ul{margin-right:-20px;font-size: 0;
+            li{display:inline-block; margin-right: 20px; margin-bottom:10px;
+            a{display: block; width: 138px; height: 38px;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #dadada;line-height: 38px; text-align: center; background:url(../images/s_bgs.png) 0 -40px repeat-x; font-size:14px;border: 1px solid #dadada;
+            &:hover{color:#fff; background-position: 0 0;-webkit-border-radius: 3px;border-radius: 3px;border: 1px solid #ff7e55;}
+            }}
+          }
+        }
+
 
     }
     }}

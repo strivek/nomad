@@ -1,0 +1,68 @@
+@charset "utf-8";
+$blue : #1875e7;
+$font-family: "宋体";
+*{margin:0; padding: 0; list-style:none; text-decoration: none;}
+.m-main-chy{
+  margin: 10px;
+  &:after{display: block;content: "";clear: both;overflow: hidden;}
+  #container2 {
+    float: left;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  #container1 {
+    float: left;
+    width: 100%;
+    background: #eeeeee;
+    position: relative;
+    right: 30%;
+  }
+
+  #col1 {
+    float: left;
+    position: relative;
+    left:30%;
+  }
+
+  #col2 {
+    float: left;
+    position: relative;
+    left: 31%;
+  }
+.left{position: relative;float:left; width:300px; margin-right: -300px; z-index:100;
+  .des{&:after{display: block;content: "";clear: both;overflow: hidden; }
+    text-align: center;
+    img{width:100px; height:100px; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; }
+  .name{ display:block; margin-top:10px; width:100%;font-size:16px;  font-family: $font-family;}
+  }
+  .list{margin-top:40px;
+    ul{list-style: none;
+    li{a{display: block;padding: 10px 0; text-align: center; color:#000; border-bottom: 1px solid #999;
+      &:hover{background:#fff;}}}
+    }
+  }
+}
+ .right{float:right; width: 100%;z-index: 99;
+ .con{ margin-left: 320px; background: #f9f9f9;
+   .title{padding:20px 20px;font-size:24px; font-weight:normal; border-bottom: 1px solid #e0e0e0;}
+   .form1{margin-top:40px;
+     .formList{margin-top: 20px; width:330px;
+       .l_wen{display:inline-block; width:100px; text-align: right;}
+       .r_shu{ display: inline-block;margin: 0px; width:200px;height: 26px; font-size: 14px; padding:4px 0 4px 10px; background: none; border: 1px solid #919191;}
+       .r_wrap{ display: inline-block; position: relative;margin-left: 10px;
+         .show{ display:inline-block;width:100px; cursor:pointer;height: 24px; border: 1px solid #919191 ; padding:4px 0 4px 10px;text-align:left; line-height:24px; background: none; }
+         .list{position: absolute; top:34px; left:0;  width:110px; background: #e0e0e0;display: none;
+          li a{display: block; padding: 4px 0 4px 10px; text-align:left; color:#000; }
+         }
+
+       }
+     }
+     .formBut{margin-top:40px; text-align: right; width: 320px;
+       button{padding: 6px 13px; border: none; background:#11cfff; color:#fff; outline: none; cursor: pointer; }
+     }
+   }
+ }
+
+ }
+}

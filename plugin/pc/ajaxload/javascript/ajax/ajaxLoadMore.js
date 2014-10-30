@@ -1,126 +1,11 @@
 define(['jquery'], function ($) {
 
-    /*var AjaxLoadMore = function (options) {
-        this.opts = $.extend({}, AjaxLoadMore.defaults, options);
-        this.container = this.opts.container;
-        this.btn = this.opts.btn;
-        this.pageNum = 0;
-        this.init();
-    };
-    AjaxLoadMore.prototype.init = function () {
-
-        this.btn.click($.proxy(this.loadData, this));
-
-    };
-
-    AjaxLoadMore.prototype.loadData = function () {
-        //判断是否需要获取数据
-
-        if (this.pageNum < this.opts.totalPages) {
-
-            this.nextPage();
-
-            this.pageAnimate();
-
-        } else {
-
-            this.viewAll();
-
-        }
-
-    };
-    AjaxLoadMore.prototype.nextPage = function () {
-
-        var request = this.getData();
-
-        this.setData(request);
-
-    };
-    AjaxLoadMore.prototype.getData = function () {
-
-        var results = $.ajax({
-            type: this.opts.type,
-            url: this.opts.url,
-            cache: this.opts.cache,
-            data: { perPage: this.opts.perPage, pages: this.pageNum }
-        });
-
-        this.pageNum++;
-
-        if(this.pageNum == this.opts.totalPages){
-            this.btn.text('没有更多了').attr('disabled', 'true');
-        }
-
-        return results;
-
-    };
-
-    AjaxLoadMore.prototype.setData = function(dataRequest){
-
-        var that = this;
-
-        dataRequest.done(function(data){
-
-            that.mixTemplate(data);
-
-        });
-
-        dataRequest.fail(function(data){
-
-            alert('加载失败');
-
-        })
-
-    };
-    AjaxLoadMore.prototype.mixTemplate = function(data){
-
-        var dataBox = '';
-
-        $.each(data, function (idx, news) {
-            dataBox += '<li><a class="link" target="_blank" href="' + news.link + '"><span>' + news.date + '</span>' + news.title + '</a></li>';
-        });
-
-        this.container.append(dataBox);
-
-    };
-
-    AjaxLoadMore.prototype.viewAll = function () {
-
-        alert('no more!!');
-
-    };
-
-    AjaxLoadMore.prototype.pageAnimate = function () {
-
-        var loadHeight = (parseInt(this.container.children().css('height')) + 1) * this.opts.perPage;// +1 : css border-bottom 1px
-
-        $(document.body).animate({scrollTop : '+='+loadHeight},800);
-
-    };
-
-    AjaxLoadMore.defaults = {
-
-        url: '',
-        type: 'POST',
-        cache: false,
-        perPage: 5,
-        totalPages: 3,
-        container: null,
-        btn: null
-
-    };
-
-    var rAjaxLoadMore = function (options) {
-        new AjaxLoadMore(options);
-    };
-
-    window.rAjaxLoadMore = $.rAjaxLoadMore = $.ajaxLoadMore = rAjaxLoadMore;*/
-
     $.fn.alm = function(options){
 
         var opts = $.extend({}, $.fn.alm.defaults, options),
             $this = $(this),
             container = opts.container,
+            loadHeight = opts.container.height(),
             pageNum = 0,
             mixTemplate = $.isFunction(opts.mixTemplate) ? opts.mixTemplate :
                 function(data){
@@ -132,7 +17,6 @@ define(['jquery'], function ($) {
                     });
 
                     return dataBox;
-
                 };
 
         function loadNext() {
@@ -148,15 +32,12 @@ define(['jquery'], function ($) {
             var results = $.ajax({
                 type: opts.type,
                 url: opts.url,
-                cache: opts.cache,
-                data: { perPage: opts.perPage, pages: pageNum }
+                cache: false,
+                data: { perPage: opts.perPage, pages: pageNum },
+                beforeSend: function(){
+                    $this.text('正在加载…………')
+                }
             });
-
-            pageNum++;
-
-            if(pageNum == opts.totalPages){
-                $this.text('没有更多了').attr('disabled', 'true');
-            }
 
             return results;
 
@@ -168,13 +49,13 @@ define(['jquery'], function ($) {
 
                 createHtml(data);
 
-                pageAnimate()
+                pageAnimate();
 
             });
 
             dataRequest.fail(function(data){
 
-                alert('加载失败');
+                $this.text('加载失败').attr('disabled', 'true').off('click');
 
             })
 
@@ -184,22 +65,86 @@ define(['jquery'], function ($) {
 
             htmlStr = mixTemplate(data);
 
-            container.append(htmlStr);
+            if($(htmlStr).find('img').length){
 
+                var t_img; // 定时器
+                var isLoad = true; // 控制变量
+                // 判断图片加载状况，加载完成后回调
+                isImgLoad(function(){
+                    // 加载完成
+                    container.append(htmlStr);
+                    resetBtn()
+                });
+                // 判断图片加载的函数
+                function isImgLoad(callback){
+                    // 注意我的图片类名都是cover，因为我只需要处理cover。其它图片可以不管。
+                    // 查找所有封面图，迭代处理
+                    $('.cover').each(function(){
+                        // 找到为0就将isLoad设为false，并退出each
+                        if(this.height === 0){
+                            isLoad = false;
+                            return false;
+                        }
+                    });
+                    // 为true，没有发现为0的。加载完毕
+                    if(isLoad){
+                        clearTimeout(t_img); // 清除定时器
+                        // 回调函数
+                        callback();
+                        // 为false，因为找到了没有加载完成的图，将调用定时器递归
+                    }else{
+                        isLoad = true;
+                        t_img = setTimeout(function(){
+                            isImgLoad(callback); // 递归扫描
+                        },500); // 我这里设置的是500毫秒就扫描一次，可以自己调整
+                    }
+                }
+
+                /*var imgCount = $(htmlStr).find('img').length;
+                var imgLoaded = 0;
+                $(htmlStr).hide()
+                    .appendTo(container)
+                    .find('img')
+                    .load(function(){
+                        ++imgLoaded;
+                        if(imgLoaded >= imgCount){
+                            container.children().show();
+                            resetBtn()
+                        }
+                    });
+                setTimeout( function(){
+                    container.children().show();
+                    resetBtn()
+                }, 5000);*/
+
+            }else{
+                container.append(htmlStr);
+                resetBtn()
+            }
+
+        }
+
+        function resetBtn(){
+            $this.text('加载更多');
+            if(pageNum == opts.totalPages){
+                $this.text('没有更多了').attr('disabled', 'true').off('click');
+            }
         }
 
         function pageAnimate() {
 
-            var loadHeight = (parseInt(container.children().css('height')) + 1) * opts.perPage;// +1 : css border-bottom 1px
-
-            $(document.body).animate({scrollTop : '+='+loadHeight},800);
+            $(document.body).animate({scrollTop : '+='+loadHeight},1000);
 
         }
 
         return this.each(function(){
 
             $this.on('click', function(){
-                loadNext()
+
+                loadNext();
+
+                pageNum++;
+
             })
 
         });
@@ -210,7 +155,6 @@ define(['jquery'], function ($) {
 
         url: '',
         type: 'POST',
-        cache: false,
         perPage: 5,
         totalPages: 3,
         container: null,

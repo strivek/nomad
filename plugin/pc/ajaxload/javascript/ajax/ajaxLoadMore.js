@@ -121,7 +121,19 @@ define(['jquery'], function ($) {
         var opts = $.extend({}, $.fn.alm.defaults, options),
             $this = $(this),
             container = opts.container,
-            pageNum = 0;
+            pageNum = 0,
+            mixTemplate = $.isFunction(opts.mixTemplate) ? opts.mixTemplate :
+                function(data){
+
+                    var dataBox = '';
+
+                    $.each(data, function(idx,news){
+                        dataBox += '<li><a class="link" target="_blank" href="' + news.link + '"><span>' + news.date + '</span>' + news.title + '</a></li>';
+                    });
+
+                    return dataBox;
+
+                };
 
         function loadNext() {
 
@@ -154,7 +166,7 @@ define(['jquery'], function ($) {
 
             dataRequest.done(function(data){
 
-                mixTemplate(data);
+                createHtml(data);
 
                 pageAnimate()
 
@@ -168,15 +180,11 @@ define(['jquery'], function ($) {
 
         }
 
-        function mixTemplate(data){
+        function createHtml(data){
 
-            var dataBox = '';
+            htmlStr = mixTemplate(data);
 
-            $.each(data, function (idx, news) {
-                dataBox += '<li><a class="link" target="_blank" href="' + news.link + '"><span>' + news.date + '</span>' + news.title + '</a></li>';
-            });
-
-            container.append(dataBox);
+            container.append(htmlStr);
 
         }
 
@@ -206,7 +214,8 @@ define(['jquery'], function ($) {
         perPage: 5,
         totalPages: 3,
         container: null,
-        btn: $(this)
+        btn: $(this),
+        mixTemplate:null
 
     }
 

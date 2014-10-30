@@ -19,7 +19,14 @@ require(['jquery','ajax/ajaxLoadMore'], function ($) {
 
     $('.j-load1').alm({
         url:'json/data1.json',
-        container: $('.j-data1')
+        container: $('.j-data1'),
+        mixTemplate: function(data){
+            var dataBox = '';
+            $.each(data, function(idx,news){
+                dataBox += '<li><a class="link data1" target="_blank" href="' + news.link + '"><span>' + news.date + '</span>' + news.title + '</a></li>';
+            });
+            return dataBox;
+        }
     })
 
 });

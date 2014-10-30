@@ -6,42 +6,7 @@
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<div class="temp">
-    <h1>README</h1>
-    <pre>
-
-        one
-        ------------------------------
-        $.ajaxLoadMore({
-            url:'json/data.json',
-            container: $(".j-data"),
-            btn: $(".j-load")
-        });
-
-        two
-        ------------------------------
-        $.ajaxLoadMore({
-            url:'json/data1.json',
-            container: $(".j-data1"),
-            btn: $(".j-load1")
-        });
-
-        default setup
-        ------------------------------
-        AjaxLoadMore.defaults = {
-
-            url: '',
-            type: 'POST',
-            cache: false,
-            perPage: 5,
-            totalPages: 3,
-            container: null,
-            btn: null
-
-        };
-
-    </pre>
-</div>
+<div class="temp"></div>
 <div class="example">
     <ul class="j-data">
         <li><a href=""><span>2014-10-24</span>When doing an XHR request, Internet Explorer will cache the response.</a></li>
@@ -62,7 +27,49 @@
     </ul>
     <button class="j-load1 u-loadBtn">加载更多</button>
 </div>
-<div class="temp"></div>
+<div class="temp">
+    <h1>README</h1>
+    <textarea>
+
+        example
+        ____________________________________________________________________________________
+        $.ajaxLoadMore({
+            url:'json/data.json',
+            container: $(".j-data"),
+            btn: $(".j-load")
+        });
+
+
+        custom
+        ____________________________________________________________________________________
+        $('.j-load1').alm({
+            url:'json/data1.json',
+            container: $('.j-data1'),
+            mixTemplate: function(data){
+                var dataBox = '';
+                $.each(data, function(idx,news){
+                    dataBox += '<li><a class="link data1" target="_blank" href="' + news.link + '"><span>' + news.date + '</span>' + news.title + '</a></li>';
+                });
+                return dataBox;
+            }
+        })
+
+
+        default setup
+        ____________________________________________________________________________________
+        AjaxLoadMore.defaults = {
+            url: '',
+            type: 'POST',
+            cache: false,
+            perPage: 5,
+            totalPages: 3,
+            container: null,
+            btn: $(this),
+            mixTemplate:null
+        };
+
+    </textarea>
+</div>
 <script data-main="javascript/main" src="javascript/require.js"></script>
 </body>
 </html>

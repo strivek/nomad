@@ -19,25 +19,63 @@ del,ins,u,s,a,a:hover{text-decoration:none;}
 body,textarea,input,button,select,keygen,legend{font:12px/1.14 arial,\5b8b\4f53;color:#333;outline:0;}
 body{background:#fff;}
 a,a:hover{color:#333;}
+.f-cb:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+.f-cb{zoom:1;}
 
-.box {
-    padding: 1rem;
-    background-color: LightBlue;
-    font-family: sans-serif;
+.temp {
+  display: block;
+  margin: 0 auto;
+  padding: 100px;
+  width: 800px;
+  h1 {
+    margin-bottom: 20px;
+    line-height: 30px;
+    border-bottom: 1px solid #333;
+  }
 }
-.box .content {
-    padding: 0.5rem;
-    background-color: LightGreen;
+textarea {
+  width: 100%;
+  height: 800px;
+  line-height: 20px;
 }
-.box .content h1 {
-    font-size: 0.7rem;
-    text-align: center;
-    line-height: 1.4rem;
+.m-alm {
+  margin: 20px auto;
+  width: 800px;
+  background-color: LightBlue;
+  li {
+    padding: 0 10px;
+    line-height: 30px;
+    font-size: 14px;
+    border-bottom: 1px dashed white;
+    a {
+      color: black;
+      span {
+        float: right;
+      }
+    }
+  }
+  .img {
+    float: left;
+    margin-bottom: 1px;
+    width: 200px;
+    img {
+      display: block;
+      width: 200px;
+    }
+  }
 }
-.box .content p {
-    font-size: 0.6rem;
-    line-height: 1.2rem;
-}
-pre {
-    line-height: 1rem;
+
+.u-loadBtn {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: transparent;
+  border: none 0;
+  &:disabled {
+    color: gray;
+    cursor: auto;
+  }
 }

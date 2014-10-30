@@ -3,30 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>ajaxload - default</title>
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-<div class="temp">
-    <h1>README</h1>
-    <pre>
-        $.ajaxLoadMore({
-            url:'json/data.json'
-        });
-
-        AjaxLoadMore.defaults = {
-
-            url: '',
-            type: 'POST',
-            cache: false,
-            perPage: 5,
-            totalPages: 3,
-            container: $(".j-data"),
-            btn: $(".j-load")
-
-        };
-    </pre>
-</div>
-<div class="example">
+<div class="temp"></div>
+<div class="m-alm">
     <ul class="j-data">
         <li><a href=""><span>2014-10-24</span>When doing an XHR request, Internet Explorer will cache the response.</a></li>
         <li><a href=""><span>2014-10-24</span>static content with a long shelf life, caching may be a good thing. </a></li>
@@ -34,9 +15,60 @@
         <li><a href=""><span>2014-10-24</span>One possible solution is to append a unique query string value to the end of the URL.</a></li>
         <li><a href=""><span>2014-10-24</span>This will ensure that for each request the browser is requesting a unique URL.</a></li>
     </ul>
-    <a class="j-load u-loadBtn">load more</a>
+    <button class="j-load u-loadBtn">加载更多</button>
 </div>
-<div class="temp"></div>
+<div class="m-alm">
+    <div class="j-data1 f-cb">
+        <a class="img" target="_blank" href="#"><img src="img/84470debbig.jpeg" alt="img"/></a>
+        <a class="img" target="_blank" href="#"><img src="img/a8bf66e6big.jpeg" alt="img"/></a>
+        <a class="img" target="_blank" href="#"><img src="img/bfdcc728big.jpeg" alt="img"/></a>
+        <a class="img" target="_blank" href="#"><img src="img/e06d286cbig.jpeg" alt="img"/></a>
+    </div>
+    <button class="j-load1 u-loadBtn">加载更多</button>
+</div>
+<div class="temp">
+    <h1>README</h1>
+    <textarea>
+
+        example
+        ____________________________________________________________________________________
+        $.ajaxLoadMore({
+            url:'json/data.json',
+            container: $(".j-data"),
+            btn: $(".j-load")
+        });
+
+
+        custom
+        ____________________________________________________________________________________
+        $('.j-load1').alm({
+            url:'json/data1.json',
+            container: $('.j-data1'),
+            mixTemplate: function(data){
+                var dataBox = '';
+                $.each(data, function(idx,img){
+                dataBox += '<a class="img" target="_blank" href="' + img.href + '"><img src="' + img.src + '" alt="' + img.alt + '"/></a>';
+                });
+                return dataBox;
+            }
+        })
+
+
+        default setup
+        ____________________________________________________________________________________
+        AjaxLoadMore.defaults = {
+            url: '',
+            type: 'POST',
+            cache: false,
+            perPage: 5,
+            totalPages: 3,
+            container: null,
+            btn: $(this),
+            mixTemplate:null
+        };
+
+    </textarea>
+</div>
 <script data-main="javascript/main" src="javascript/require.js"></script>
 </body>
 </html>

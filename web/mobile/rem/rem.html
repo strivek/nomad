@@ -16,11 +16,33 @@
 </head>
 <body>
 <div class="box">
-    <div class="content">text</div>
+    <div class="content">
+        <h1>说明</h1>
+        <p>W3C官网描述rem为：</p>
+        <p>“font size of the root element”。</p>
+        <p>以IPhone5的分辨率为基准设定1rem = 20px</p>
+        <p>通过获取不同设备的文档宽度</p>
+        <p>计算其于基准分辨率的比例关系</p>
+        <p>动态设定1rem的值，实现适应不同设备。</p>
+    </div>
 </div>
-<p>rem: root em (set 1rem=20px)</p>
-<p>blue box padding:1rem(20px)</p>
-<p>greem box height:5rem(100px)</p>
+<pre>
+    $(function(){
+        var oHtml=$('html');
+        var phptoWid='';
+        var currentRem='';
+        function setPx(){
+            phptoWid=oHtml.width();
+            currentRem=phptoWid/320*20+'px';
+            oHtml.css('fontSize',currentRem);
+        }
+        setPx();
+
+        $(window).on('resize orientationchange').resize(function(){
+            setPx();
+        });
+    });
+</pre>
 <script src="js/zepto.min.js"></script>
 <script src="js/main.js"></script>
 </body>

@@ -1,1 +1,1 @@
-ajaxload
+##ajaxloadmore

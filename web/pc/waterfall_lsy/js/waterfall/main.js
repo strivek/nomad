@@ -18,7 +18,7 @@ require(['jquery', 'waterfall/jquery.waterfall'], function ($) {
             createHtml: function(data){
                 return '<div class="wf_item_inner">' +
                     '<a href="'+ data.url +'" class="thumb" target="_blank">' +
-                    '<img class="thumb_img"  src="'+ data.imgSrc +'" />' +
+                    '<img class="thumb_img"  src="'+ data.imgSrc +'" />' +//图片类名必须添加thumb_img
                     '</a>' +
                     '<p class="desc" style="margin-top:1px;">'+ data.title +'</p>' +
                     '<a style="display:block;color:#060;" href="'+data.image+'" target="_blank">查看大图</a>' +

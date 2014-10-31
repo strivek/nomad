@@ -415,7 +415,7 @@ a, a:hover {
           position: relative;
           height: 46px;
           line-height: 46px;
-          -webkit-border-radius: 6px;
+          -webkit-border-radius: 10px;
           -moz-border-radius: 10px;
           border-radius: 10px; }
           .pop-up .pop_reg .form .item_wrap .item .icon {
@@ -474,17 +474,20 @@ a, a:hover {
         border: none;
         margin: 26px auto 0; }
         .pop-up .pop_reg .form .btn .item {
-          background: url(../images/ui-p.png) -24px -340px no-repeat;
           border: 1px solid #9cbaef;
           box-shadow: inset 0 1px 3px #92b6ec,inset 0 0 2px #627dca,inset 0 -2px 3px #4c69b8; }
           .pop-up .pop_reg .form .btn .item .button {
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
             color: #fff;
             font-size: 18px;
             width: 100%;
             height: 46px;
-            cursor: pointer; }
-          .pop-up .pop_reg .form .btn .item .button:active {
-            background-position: -24px -287px; }
+            cursor: pointer;
+            background: url(../images/ui-p.png) -24px -288px no-repeat; }
+          .pop-up .pop_reg .form .btn .item .button_bg {
+            background-position: -24px -340px; }
       .pop-up .pop_reg .form .xinxi {
         margin: 0 auto;
         width: 376px;

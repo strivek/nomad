@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>弹出式登录框</title>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body>
+
+<header class="header">
+    <h1 class="log"><a href="" class="logRadio">登录</a></h1>
+</header>
+<div class="pop-up">
+    <div class="pop_bg"></div>
+    <div class="pop_log">
+        <div class="head">
+            <h2>登录</h2> <span class="close"></span>
+        </div>
+        <form action="" class="form">
+            <div class="form-wrap ">
+                <div class="item_wrap" >
+                    <div class="item blur_border">
+                        <span class="mob icon"></span>
+                        <i>邮箱/手机号</i>
+                        <input type="text" class="form_input"/>
+                        <span class="warning">请输入手机号</span>
+                    </div>
+                </div>
+                <div class="item_wrap">
+                    <div class="item blur_border">
+                        <span class="psd icon"></span>
+                        <i>密码</i>
+                        <input type="password" class="form_input"/>
+                        <span class="warning">请输入密码</span>
+                    </div>
+                </div>
+                <div class="xinxi">
+                    <a href="#">忘记密码?</a>
+                </div>
+                <div class="item_wrap btn">
+                    <div class="item">
+                        <input type="submit" value="登录" class="button_log" />
+                    </div>
+                </div>
+                <div class="item_wrap btn">
+                    <div class="item">
+                        <input type="submit" value="注册" class="button_reg"/>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+<script data-main="js/main" src="js/require.js"></script>
+</body>
+</html>

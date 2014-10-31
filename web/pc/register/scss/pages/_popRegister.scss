@@ -14,7 +14,7 @@
   }
  .form{padding-top: 10px;
    .item_wrap{margin: 10px auto 0; width:372px;height:48px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
-     .item{ background:#f9f9f9;position: relative; height: 46px; line-height:46px;-webkit-border-radius: 6px; -moz-border-radius: 10px; border-radius: 10px;
+     .item{ background:#f9f9f9;position: relative; height: 46px; line-height:46px;-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
        .icon{display: block; float:left;width: 48px;height: 45px;background: url(../images/dialog-input-icons.png) no-repeat;border-right: #ccc solid 1px;}
        .yan{background-position:-96px 0;}
        .E-mail{background-position:-144px 0; }
@@ -27,10 +27,10 @@
      .re_psd{i{left:20px;}}
      }
      .focus_border{border:1px solid #9cbaef;}
-     .btn{ border: none;margin: 26px auto 0;
-     .item{background:url(../images/ui-p.png) -24px -340px no-repeat; border: 1px solid #9cbaef;box-shadow: inset 0 1px 3px #92b6ec,inset 0 0 2px #627dca,inset 0 -2px 3px #4c69b8;
-      .button{ color:#fff; font-size:18px;width: 100%;height: 46px; cursor: pointer;  }
-       .button:active{background-position:-24px -287px; }
+     .btn { border: none;margin: 26px auto 0;
+       .item{ border: 1px solid #9cbaef;box-shadow: inset 0 1px 3px #92b6ec,inset 0 0 2px #627dca,inset 0 -2px 3px #4c69b8;
+       .button{ -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;color:#fff; font-size:18px;width: 100%;height: 46px; cursor: pointer;background:url(../images/ui-p.png) -24px -288px no-repeat;  }
+       .button_bg{background-position:-24px -340px; }
      }
    }
   .xinxi{margin: 0 auto;width:376px;border-bottom:1px solid #dedede;text-align: center;

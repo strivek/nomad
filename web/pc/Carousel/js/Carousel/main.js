@@ -4,8 +4,8 @@ require(['jquery', 'Carousel/Carousel'], function () {
             controlNav: false,
             animationLoop: false,
             slideshow: false,
-            itemWidth: 210,
-            itemMargin: 5,
+            itemWidth: 200,
+            itemMargin: 0,
             asNavFor: '#slider'
         });
 

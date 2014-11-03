@@ -151,11 +151,14 @@ a, a:hover {
         margin-top: 40px; }
         .m-main-chy .right .con .form1 .formList {
           margin-top: 20px;
-          width: 330px; }
+          /* width:330px;*/
+          font-size: 0; }
           .m-main-chy .right .con .form1 .formList .l_wen {
             display: inline-block;
             width: 100px;
-            text-align: right; }
+            text-align: right;
+            font-size: 14px;
+            margin-right: 20px; }
           .m-main-chy .right .con .form1 .formList .r_shu {
             display: inline-block;
             margin: 0px;
@@ -163,12 +166,22 @@ a, a:hover {
             height: 26px;
             font-size: 14px;
             padding: 4px 0 4px 10px;
-            background: none;
+            background-color: none;
+            background-color: transparent;
+            background-image: url(about:blank);
             border: 1px solid #919191; }
+          .m-main-chy .right .con .form1 .formList .sex_group {
+            font-size: 14px;
+            border: none; }
+            .m-main-chy .right .con .form1 .formList .sex_group label {
+              display: inline-block;
+              margin-right: 10px; }
+            .m-main-chy .right .con .form1 .formList .sex_group input {
+              display: inline-block; }
           .m-main-chy .right .con .form1 .formList .r_wrap {
             display: inline-block;
             position: relative;
-            margin-left: 10px; }
+            font-size: 14px; }
             .m-main-chy .right .con .form1 .formList .r_wrap .show {
               display: inline-block;
               width: 100px;
@@ -196,12 +209,17 @@ a, a:hover {
           text-align: right;
           width: 320px; }
           .m-main-chy .right .con .form1 .formBut button {
-            padding: 6px 13px;
-            border: none;
-            background: #11cfff;
+            padding: 8px 16px;
+            background: url(../images/s_bgs.png) 0 0px repeat-x;
             color: #fff;
+            font-size: 14px;
+            font-weight: bold;
             outline: none;
-            cursor: pointer; }
+            cursor: pointer;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            border: 1px solid #f2731d; }
 
 html, body {
   width: 100%;

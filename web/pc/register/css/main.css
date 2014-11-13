@@ -74,10 +74,10 @@ a, a:hover {
   height: 100%;
   width: 100%; }
   .g-wrap .m-main-chy {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto; }
     .g-wrap .m-main-chy .goLogin {
-      padding: 5px 0;
+      padding: 5px 20px 5px 0;
       border-bottom: 1px solid #538700;
       font-size: 14px;
       font-family: "SimSun";
@@ -320,7 +320,7 @@ a, a:hover {
   background: #e6e7e9; }
   .header .zhu {
     margin: 0 auto;
-    width: 1120px;
+    max-width: 1160px;
     height: 38px;
     line-height: 38px;
     font-size: 14px;
@@ -328,7 +328,8 @@ a, a:hover {
     text-align: right; }
     .header .zhu a {
       display: block;
-      height: 38px; }
+      height: 38px;
+      padding-right: 40px; }
 
 .pop-up {
   display: none; }

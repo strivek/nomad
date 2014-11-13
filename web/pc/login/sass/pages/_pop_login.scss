@@ -1,6 +1,13 @@
+@charset "utf-8";
 .header{width:100%; height:38px; background: #e6e7e9;
-  .log{margin:0 auto; width: 1120px;   height: 38px; line-height: 38px; font-size:14px; font-weight: normal; text-align: right;
-    a{display: block; height: 38px;}}
+  .log{margin:0 auto;
+//    width: 1120px;
+    //上述删除使用max-width: 1160px 使ipad自适应
+    max-width: 1160px;
+    height: 38px; line-height: 38px; font-size:14px; font-weight: normal; text-align: right;
+    a{display: block; height: 38px;
+      //响应ipad
+      padding-right: 40px;}}
 }
 .pop-up{ display: none;
   .pop_bg{ position: fixed;  top: 0; left: 0; width: 100%; height: 100%; background:#000; z-index: 0;opacity: 0.618;;}

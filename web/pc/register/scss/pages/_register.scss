@@ -1,8 +1,15 @@
+@charset "utf-8";
 $font-family:'SimSun';
 .g-wrap{background: #f8f8f8;margin: 0;padding-top: 30px; height: 100%; width: 100%;
 .m-main-chy{
-  width:800px;margin:0 auto;
- .goLogin{padding:5px 0; border-bottom: 1px solid #538700; font-size:14px; font-family: $font-family; font-weight: normal; text-align: right;
+//  width:800px;
+  //使其适应ipad端
+  max-width: 800px;
+  margin:0 auto;
+ .goLogin{
+//   padding:5px 0;
+   padding:5px 20px 5px 0;
+   border-bottom: 1px solid #538700; font-size:14px; font-family: $font-family; font-weight: normal; text-align: right;
    a{color:#00b4ff;
      &:hover{color: #cbff20;}
    }

@@ -197,7 +197,7 @@ define(["jquery"], function ($) {
                 wf_col_height = $wf_col.height(),
                 $wf_item, $wf_img, htmlStr;
             // 确保所有图片都已知宽高
-            loadImg(jsonCache, opts.imgUrlName, function () {
+            loadImg(jsonCache,opts.baseUrl, opts.imgUrlName, function () {
                 while (perNum-- > 0 && (data = jsonCache.pop())) {
 
                     minColsIndex = getColsIndex(colsHeight)[0];
@@ -358,6 +358,7 @@ define(["jquery"], function ($) {
         marginTop: 10,			// 每列的上间宽(int)
         perNum: 'auto',			// 每次下拉时显示多少个(默认是列数)
         isAnimation: true,		// 是否使用动画效果
+        baseUrl:"",
         ajaxTimes: 'infinite',	// 限制异步请求的次数(int) 字符串'infinite'表示无限加载
         imgUrlName: 'imgSrc',	// 在json里表示图片路径的属性名称(用于预加载图片获取高宽)
         params: {},				// 键值对，发送到服务器的数据。将自动转换为请求字符串格式。
@@ -399,7 +400,7 @@ define(["jquery"], function ($) {
                 intervalId = null;
             };
 
-        return function (url, ready, load, error) {
+        return function (url,baseUrl,ready, load, error) {
             var check, width, height, newWidth, newHeight,
                 img = new Image();
 
@@ -409,7 +410,7 @@ define(["jquery"], function ($) {
                 return;
             }
 
-            img.src = url;
+            img.src =baseUrl+url;
 
             // 如果图片被缓存，则直接返回缓存数据
             if (img.complete) {
@@ -462,7 +463,7 @@ define(["jquery"], function ($) {
     })();
 
     // 快速获取图片头数据，加载就绪后执行回调函数
-    function loadImg(jsonData, imgUrlName, callback) {
+    function loadImg(jsonData,baseUrl, imgUrlName, callback) {
         var count = 0,
             i = 0,
             intervalId = null,
@@ -484,7 +485,7 @@ define(["jquery"], function ($) {
                 ++count;
             } else {
                 (function (data) {
-                    imgReady(data[imgUrlName], function (width, height) {
+                    imgReady(data[imgUrlName],baseUrl, function (width, height) {
                         console.log(data[imgUrlName]);
                         console.log(height);
                         // 图片头数据加载就绪，保存宽高

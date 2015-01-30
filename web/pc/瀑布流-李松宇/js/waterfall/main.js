@@ -28,3 +28,4 @@ require(['jquery', 'waterfall/jquery.waterfall'], function ($) {
         });
     });
 });
+

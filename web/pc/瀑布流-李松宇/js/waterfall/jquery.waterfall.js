@@ -147,8 +147,6 @@ define(["jquery"], function ($) {
 
                 };
         }();
-
-
         // 异步获取数据
         function getJSONData() {
             if (!(isFinish || isLoading)) { // 确保上一次加载完毕才发送新的请求

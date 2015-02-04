@@ -143,6 +143,7 @@ body {
 
 .wf_col {
   position: relative;
+  margin: 0 auto;
   min-height: 473px;
   _height: 473px; }
 
